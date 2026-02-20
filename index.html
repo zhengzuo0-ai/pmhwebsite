@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paramount Matter Holdings | Mineral Exploration & Mining Investment</title>
+<meta name="description" content="Paramount Matter Holdings is a science-driven mineral exploration and mining investment firm headquartered in Singapore, with established operations across Africa.">
+<meta name="keywords" content="Paramount Matter Holdings, mineral exploration, mining investment, gold, copper, rare earths, Africa, Singapore">
+<!-- Open Graph -->
+<meta property="og:title" content="Paramount Matter Holdings | Mineral Exploration & Mining Investment">
+<meta property="og:description" content="A science-driven mineral exploration and mining investment firm headquartered in Singapore, with established operations across Africa.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/hero-bg.jpg">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paramount Matter Holdings">
+<meta name="twitter:description" content="Science-driven mineral exploration and mining investment across Africa.">
+<meta name="twitter:image" content="assets/img/hero-bg.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230F1E2E'/%3E%3Cpath d='M16 5 L27 16 L16 27 L5 16 Z' fill='%23B8964E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Navy palette */
+  --navy-dark: #0F1E2E;
+  --navy-mid: #152740;
+  --navy-light: #1C3452;
+  /* Gold */
+  --gold: #B8964E;
+  --gold-light: #CCAC6A;
+  /* Backgrounds */
+  --cream: #F7F5F0;
+  --white: #FFF;
+  --warm-gray: #F0EDE6;
+  /* Text */
+  --text-dark: #2A2A2A;
+  --text-mid: #555;
+  --text-light: #7A7A7A;
+  /* Borders */
+  --border: #E2DED5;
+  /* Commodity colors */
+  --gold-commodity: #C4A55A;
+  --gold-strategic: #D4836A;
+  --polymetallic: #7BA89D;
+
+  /* Legacy aliases */
+  --ny: var(--navy-dark);
+  --nm: var(--navy-mid);
+  --nl: var(--navy-light);
+  --gd: var(--gold);
+  --gl: var(--gold-light);
+  --cr: var(--cream);
+  --wh: var(--white);
+  --tx: var(--text-dark);
+  --tm: var(--text-mid);
+  --tl: var(--text-light);
+  --bd: var(--border);
+  --wg: var(--warm-gray);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond',Georgia,serif;color:var(--tx);background:var(--cr)}
+::selection{background:rgba(184,150,78,.2)}
+.dm{font-family:'DM Sans',sans-serif}
+.page{display:none}.page.active{display:block;animation:pageIn .35s ease}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+/* Animations */
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fu .7s ease both}.fu1{animation:fu .7s .1s ease both}.fu2{animation:fu .7s .2s ease both}.fu3{animation:fu .7s .3s ease both}.fu4{animation:fu .7s .4s ease both}.fu5{animation:fu .7s .5s ease both}
+/* Nav */
+nav{position:sticky;top:0;z-index:9999;height:60px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(247,245,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd);transition:all .3s}
+nav .logo{display:flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none}
+nav .logo img{height:24px;width:auto}
+nav .logo span{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--ny)}
+nav .links{display:flex;gap:28px}
+nav .links a{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--ny);text-decoration:none;padding:8px 0;transition:color .3s;cursor:pointer}
+nav .links a:hover{color:var(--gd)}nav .links a.active{color:var(--gd);border-bottom:2px solid var(--gd);padding-bottom:6px}
+nav .lang{font-family:'DM Sans',sans-serif;font-size:11px;color:var(--tl);display:flex;gap:8px}
+nav .lang a{color:var(--tl);text-decoration:none;transition:color .3s}
+nav .lang a:hover,nav .lang a.active{color:var(--gd)}
+/* Typography */
+.sl{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gd)}
+.bt{font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.85;color:var(--tm)}
+.goldline{height:1px;background:linear-gradient(90deg,var(--gd),transparent)}
+/* Cards */
+.ch{transition:transform .3s,box-shadow .3s}.ch:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.06)}
+.card{background:var(--wh);border:1px solid var(--bd);border-radius:2px;padding:24px}
+/* Buttons */
+.btn-gold{background:none;border:1px solid var(--gd);color:var(--gd);padding:11px 28px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-gold:hover{background:var(--gd);color:var(--ny)}
+.btn-ghost{background:transparent;border:none;color:#8899AA;padding:11px 20px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:color .3s;text-decoration:none}
+.btn-ghost:hover{color:var(--wh)}
+/* Callout */
+.callout{padding:28px 36px;background:var(--nm);border-radius:2px;border-left:3px solid var(--gd)}
+.callout h3{font-size:17px;font-weight:500;color:var(--wh);margin-bottom:6px}
+.callout p{font-family:'DM Sans',sans-serif;font-size:13.5px;color:#94A8BA;line-height:1.85}
+/* Light hero */
+.light-hero{padding:60px 80px 44px;background:var(--wg);border-bottom:1px solid var(--bd)}
+.light-hero h1{font-size:38px;font-weight:300;color:var(--ny);line-height:1.15}
+/* Grid helpers */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+/* Section */
+.sec{padding:56px 80px}.sec-inner{max-width:900px;margin:0 auto}
+/* Arrow list */
+.alist div{display:flex;gap:8px;margin-bottom:7px}
+.alist span.arr{color:var(--gd);flex-shrink:0;font-size:11px;margin-top:2px}
+.alist span.txt{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--tm);line-height:1.6}
+/* Country card */
+.cc{padding:20px 18px;background:var(--wh);border:1px solid var(--bd);border-left:3px solid var(--bd);border-radius:2px;cursor:pointer;transition:all .3s}
+.cc:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.05)}
+.cc-gold:hover{border-left-color:var(--gold-commodity)}
+.cc-strategic:hover{border-left-color:var(--gold-strategic)}
+.cc-poly:hover{border-left-color:var(--polymetallic)}
+/* Step bar */
+.steps{display:flex;gap:0;margin-bottom:40px;position:relative}
+.step{flex:1;text-align:center;position:relative}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--navy-dark);color:var(--gold);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;position:relative;z-index:1}
+.step-label{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.step-title{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;color:var(--navy-dark);margin-bottom:8px}
+.step-desc{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text-mid);line-height:1.7;padding:0 8px}
+.step::after{content:'';position:absolute;top:18px;left:calc(50% + 18px);right:calc(-50% + 18px);height:2px;background:var(--border)}
+.step:last-child::after{display:none}
+/* Footer */
+footer{background:var(--ny);padding:48px 60px 28px;color:var(--wh)}
+footer a{color:#7A8FA0;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:1px;transition:color .3s}
+footer a:hover{color:var(--gd)}
+/* Form */
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:12px 14px;border:1px solid var(--bd);background:var(--wh);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--tx);border-radius:2px;outline:none;transition:border .3s}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--gd)}
+.contact-form select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A7A7A' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.contact-form textarea{resize:vertical;min-height:120px}
+.contact-form label{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--tl);margin-bottom:6px;display:block}
+@media(max-width:768px){
+  nav{padding:12px 20px;position:relative}
+  nav .links{display:none !important;position:absolute;top:100%;left:0;right:0;background:#0F1E2E !important;flex-direction:column;padding:20px 24px;gap:16px;z-index:10000;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+  nav .links.open{display:flex !important;flex-direction:column}
+  nav .links a,nav .links a:hover,nav .links a:visited,nav .links a.active{font-size:14px;color:#ffffff !important;opacity:1;border-bottom:none;padding-bottom:8px}
+  .hamburger{display:block;cursor:pointer;font-size:24px;color:#0F1E2E;padding:4px 8px;-webkit-tap-highlight-color:transparent}
+  .hero{padding:100px 24px 48px}
+  .hero h1{font-size:32px}
+  .hero p{font-size:13px}
+  .hero .fu2{flex-direction:column;gap:10px}
+  .hero .fu2 a{width:100%;text-align:center}
+  .sec{padding:36px 24px !important}
+  section{padding:36px 24px !important}
+  .g2,.g3,.g4{grid-template-columns:1fr !important;gap:24px !important}
+  div[style*="grid-template-columns"]{grid-template-columns:1fr !important}
+  div[style*="display:flex;justify-content:center;gap:56px"]{flex-wrap:wrap;gap:20px !important;padding:20px !important;justify-content:space-around !important}
+  div[style*="display:flex;gap:28px;padding:28px"]{flex-direction:column;gap:16px}
+  div[style*="min-width:90px"]{min-width:auto !important;text-align:left !important}
+  div[style*="display:flex;gap:32px;align-items:center"]{flex-direction:column;gap:16px !important;padding:24px 20px !important;text-align:center}
+  div[style*="min-width:56px;height:56px"]{display:none !important}
+  div[style*="padding:0 80px"]{padding:0 24px !important}
+  div[style*="margin-left:46px"]{margin-left:0 !important;max-width:100% !important}
+  div[style*="display:flex;align-items:center;gap:40px"]{flex-direction:column;gap:16px !important}
+  div[style*="display:flex;gap:40px"]{flex-direction:column;gap:24px !important}
+  div[style*="display:flex;gap:48px"]{flex-direction:column;gap:24px !important;align-items:center !important}
+  footer{padding:36px 24px !important}
+  footer>div{flex-direction:column !important;gap:20px !important}
+  .sl{font-size:13px}
+  h1.fu1{font-size:26px !important}
+  .contact-form input,.contact-form textarea,.contact-form select{font-size:16px}
+  .contact-form div[style*="grid-template-columns"]{grid-template-columns:1fr !important}
+  .steps{flex-direction:column;gap:24px}
+  .step{text-align:left;display:flex;gap:16px;align-items:flex-start}
+  .step-num{margin:0;flex-shrink:0}
+  .step::after{display:none}
+  .step-desc{padding:0}
+}
+@media(min-width:769px){.hamburger{display:none}}
+@media(max-width:480px){
+  .hero h1{font-size:26px}
+  div[style*="font-size:32px"]{font-size:22px !important}
+  .card{padding:18px !important}
+  div[style*="font-size:42px"]{font-size:28px !important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" onclick="showPage('home')">
+    <img src="assets/img/logo.png" alt="PMH">
+    <span>Paramount Matter</span>
+  </a>
+  <div class="links" id="navLinks">
+    <a onclick="showPage('about');closeNav()">About</a>
+    <a onclick="showPage('approach');closeNav()">Approach</a>
+    <a onclick="showPage('projects');closeNav()">Projects</a>
+    <a onclick="showPage('team');closeNav()">Team</a>
+    <a onclick="showPage('contact');closeNav()">Contact</a>
+  </div>
+  <div class="hamburger" onclick="toggleNav()">&#9776;</div>
+  </nav>
+
+<!-- ==================== HOME ==================== -->
+<div id="home" class="page active">
+  <section style="min-height:85vh;display:flex;flex-direction:column;justify-content:center;padding:0 80px;position:relative;overflow:hidden;background:#0a0c12">
+    <div style="position:absolute;inset:0;background:url('assets/img/hero-bg.jpg') center/cover no-repeat;opacity:.45"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(10,12,18,.92) 0%,rgba(10,12,18,.6) 50%,rgba(10,12,18,.3) 100%)"></div>
+    <div style="position:relative;z-index:1;max-width:680px">
+      <div class="fu" style="margin-bottom:28px"><img src="assets/img/logo.png" alt="PMH" style="height:52px"></div>
+      <h1 class="fu1" style="font-size:58px;font-weight:300;color:#fff;line-height:1.12;margin-bottom:6px">Unlocking<br><span style="color:#B8964E;font-weight:500">Geological</span><br>Potential</h1>
+      <div class="fu2" style="width:72px;height:2px;background:#B8964E;margin:24px 0"></div>
+      <p class="fu3 dm" style="font-size:15px;color:#94A8BA;line-height:1.85;max-width:500px">A science-driven mineral exploration and mining investment firm. Headquartered in Singapore, with established operations and exploration interests across Africa.</p>
+      <div class="fu4" style="display:flex;gap:14px;margin-top:32px">
+        <a class="btn-gold" onclick="showPage('approach')">Our Approach</a>
+        <a class="btn-ghost" onclick="showPage('contact')">Get in Touch &rarr;</a>
+      </div>
+    </div>
+    <div style="position:absolute;right:60px;top:50%;transform:translateY(-50%);opacity:.05">
+      <svg width="380" height="380" viewBox="0 0 380 380"><polygon points="190,10 370,185 310,370 70,370 10,185" fill="none" stroke="#B8964E" stroke-width="1"/><circle cx="190" cy="190" r="110" fill="none" stroke="#B8964E" stroke-width=".5"/></svg>
+    </div>
+  </section>
+  <section style="background:#fff;padding:40px 80px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;border-bottom:1px solid #E2DED5">
+    <div class="fu1" style="text-align:center;flex:1;min-width:120px"><div style="font-size:26px;font-weight:600;color:#0F1E2E" data-count="8">0</div><div class="dm" style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-top:3px">Countries of Interest</div></div>
+    <div class="fu2" style="text-align:center;flex:1;min-width:120px"><div style="font-size:26px;font-weight:600;color:#0F1E2E" data-count="3">0</div><div class="dm" style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-top:3px">Continents</div></div>
+    <div class="fu3" style="text-align:center;flex:1;min-width:140px"><div style="font-size:26px;font-weight:600;color:#0F1E2E" data-count="10000" data-suffix="+" data-prefix="">0</div><div class="dm" style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-top:3px">km&sup2; Exploration Coverage</div></div>
+    <div class="fu4" style="text-align:center;flex:1;min-width:120px"><div style="font-size:26px;font-weight:600;color:#0F1E2E">Au &middot; Cu &middot; REE</div><div class="dm" style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-top:3px">Target Commodities</div></div>
+    <div class="fu5" style="text-align:center;flex:1;min-width:120px"><div style="font-size:26px;font-weight:600;color:#0F1E2E">Singapore</div><div class="dm" style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-top:3px">Headquartered</div></div>
+  </section>
+  <section style="padding:72px 80px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px">
+      <div class="fu1 ch card" style="padding:32px"><div class="goldline" style="width:40px;margin-bottom:18px"></div><h3 style="font-size:20px;font-weight:500;color:#0F1E2E;margin-bottom:10px">Science-First Exploration</h3><p class="bt" style="font-size:14px">We treat mineral exploration as a scientific discipline. Our in-house team of geologists, geochemists, and data scientists conducts the research, we don&rsquo;t outsource the thinking.</p></div>
+      <div class="fu2 ch card" style="padding:32px"><div class="goldline" style="width:40px;margin-bottom:18px"></div><h3 style="font-size:20px;font-weight:500;color:#0F1E2E;margin-bottom:10px">Privately Capitalised</h3><p class="bt" style="font-size:14px">We operate with our own capital, independently and without fundraising cycles. When the geology supports a decision, we act, with the speed and conviction that listed companies cannot match.</p></div>
+      <div class="fu3 ch card" style="padding:32px"><div class="goldline" style="width:40px;margin-bottom:18px"></div><h3 style="font-size:20px;font-weight:500;color:#0F1E2E;margin-bottom:10px">Grounded in Africa</h3><p class="bt" style="font-size:14px">We have established operations in West Africa and active interests across the continent. Our model is built on trusted local partnerships, long-term commitment, and deep respect for the communities where we work.</p></div>
+    </div>
+  </section>
+  <section style="padding:0 80px 72px">
+    <div class="fu3" style="padding:36px 44px;background:#152740;border-radius:3px;border-left:3px solid #B8964E;display:flex;gap:32px;align-items:center">
+      <div style="min-width:56px;height:56px;border-radius:50%;border:2px solid rgba(184,150,78,.2);display:flex;align-items:center;justify-content:center"><span class="dm" style="font-size:20px;font-weight:700;color:#B8964E">&check;</span></div>
+      <div><div class="dm" style="font-size:16px;font-weight:600;color:#fff;margin-bottom:4px">Proven Operational Track Record</div><p class="dm" style="font-size:14px;color:#94A8BA;line-height:1.8">PMH has established active mining operations in West Africa, with a validated operational model, trusted local partnerships, and compliant trading channels. We are not a concept, we are an operating business building a portfolio of producing and exploration-stage assets.</p></div>
+    </div>
+  </section>
+
+  <section style="padding:0 80px 72px">
+    <div class="fu4" style="background:#F7F5F0;border-radius:3px;padding:48px 44px;border-top:3px solid #5A8F5A">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+        <span style="font-size:22px">&#127793;</span>
+        <div class="dm" style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#5A8F5A;font-weight:700">Responsibility &amp; Community</div>
+      </div>
+      <p class="bt" style="font-size:15px;line-height:2;color:#2A3A4A;max-width:860px;margin-bottom:28px">We believe that mining done right creates value far beyond the resource itself. PMH integrates environmental stewardship and community development into every stage of our operations, from initial exploration through to extraction and beyond.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+        <div class="fu5 card" style="padding:24px;border-left:3px solid #5A8F5A">
+          <div class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E;margin-bottom:8px">Environmental Stewardship</div>
+          <p class="bt" style="font-size:13px;line-height:1.8">We apply responsible land management practices, work to minimise environmental disruption, and design our operations to leave a sustainable footprint. Where we operate, we aim to protect, not just extract.</p>
+        </div>
+        <div class="fu5 card" style="padding:24px;border-left:3px solid #B8964E">
+          <div class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E;margin-bottom:8px">Community Development</div>
+          <p class="bt" style="font-size:13px;line-height:1.8">Our projects are built alongside local communities, not over them. We invest in local employment, contribute to community infrastructure, and ensure the people closest to our operations share in the benefits they help create.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<div id="about" class="page">
+  <div class="light-hero">
+    <div class="sl fu" style="margin-bottom:10px">Our Firm</div>
+    <h1 class="fu1">Who We Are</h1>
+    <div class="fu2" style="width:56px;height:2px;background:#B8964E;margin:16px 0"></div>
+    <p class="fu3 bt" style="max-width:600px">A science-driven mineral exploration and mining investment firm, bridging geological expertise with advanced technology and deep local partnerships.</p>
+  </div>
+  <section style="padding:64px 80px;max-width:900px;margin:0 auto">
+    <div class="fu"><p class="bt" style="font-size:16px;line-height:2;margin-bottom:28px">Paramount Matter Holdings (&ldquo;PMH&rdquo;) is the parent investment group overseeing a portfolio of companies operating across the mineral exploration and natural resources sector. We combine deep geological expertise with advanced technology to identify, acquire, and develop high-potential mineral assets in underexplored regions.</p><p class="bt" style="font-size:16px;line-height:2;margin-bottom:28px">Our mission is to unlock overlooked geological potential and transform it into high-value, market-recognized assets.</p></div>
+    <div class="fu2 callout" style="margin:40px 0"><div class="sl" style="margin-bottom:10px">What Sets Us Apart</div><p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#99AABB;line-height:1.9">Unlike traditional junior mining companies that rely on capital markets to fund exploration and sell projects, PMH takes a fundamentally different approach. We are a privately capitalised firm with in-house geological research capability. Our team conducts the science. Our capital funds the work. Our decisions are driven by geology, not fundraising cycles.</p></div>
+    <div class="fu3"><p class="bt" style="font-size:16px;line-height:2;margin-bottom:28px">This independence gives us the freedom to move quickly, deploy capital with precision, and maintain operational control from target identification through to development. We are not beholden to quarterly reporting cycles or external shareholders, only to the quality of the geology and the strength of our partnerships.</p></div>
+    <div class="fu4 card" style="margin:40px 0;padding:32px 36px"><div class="sl" style="margin-bottom:10px">Our Partnership Philosophy</div><p class="bt" style="line-height:2">We believe the quality of local partnerships determines project success. In every jurisdiction, we work alongside trusted local partners who bring deep community relationships, regulatory knowledge, and operational insight. Our model is collaborative, not extractive, we build for the long term, share value with the communities where we operate, and invest in relationships that outlast any single project.</p><p class="bt" style="line-height:2;margin-top:12px">This is not a principle we adopted from a textbook. It is a lesson we learned firsthand through years of operating in West Africa, where the right local partner is the single most important factor in whether a project succeeds or fails.</p></div>
+    <div class="fu4" style="margin:40px 0"><div class="sl" style="margin-bottom:16px">Our Focus</div><div class="g2"><div class="card"><div style="font-size:18px;font-weight:600;color:#0F1E2E;margin-bottom:6px">Gold</div><p class="bt" style="font-size:13px">Primary commodity focus across West and Southern Africa</p></div><div class="card"><div style="font-size:18px;font-weight:600;color:#0F1E2E;margin-bottom:6px">Critical Metals</div><p class="bt" style="font-size:13px">Copper, polymetallic deposits, and rare earth elements in select jurisdictions</p></div></div></div>
+    <div class="fu5" style="margin:40px 0;padding:32px 36px;background:#F0EDE6;border:1px solid #E2DED5;border-radius:2px"><div class="sl" style="margin-bottom:10px">Macro Context</div><p class="bt" style="line-height:2">Gold prices have nearly doubled over the past five years, yet early-stage exploration remains severely underfunded. Africa&rsquo;s share of global exploration spending has declined from 16% to 12%, underscoring systemic underinvestment amid rising demand. This structural gap creates a rare window for well-capitalised, science-driven explorers to acquire premium assets on favourable terms.</p></div>
+  </section>
+</div>
+
+<!-- ==================== APPROACH ==================== -->
+<div id="approach" class="page">
+  <div class="light-hero">
+    <div class="sl fu" style="margin-bottom:10px">Our Approach</div>
+    <h1 class="fu1">Science First. Geology Decides.</h1>
+    <div class="fu2" style="width:52px;height:2px;background:#B8964E;margin:14px 0"></div>
+    <p class="fu3 bt" style="max-width:580px">Structured methodology. Advanced technology. Decisive execution.</p>
+  </div>
+  <section style="padding:64px 80px;max-width:900px;margin:0 auto">
+    <div class="fu"><div class="sl" style="margin-bottom:10px">Methodology</div><h2 style="font-size:30px;font-weight:400;color:#0F1E2E;margin-bottom:20px">A Systematic, Multi-Scale Approach</h2><p class="bt" style="margin-bottom:40px">Exploration at PMH progresses systematically from regional analysis to drill-ready targets. Each phase narrows the search area while increasing geological confidence.</p></div>
+    <!-- Step Bar -->
+    <div class="fu1 steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-label">Regional Scale</div>
+        <div class="step-title">Tectonic Framework &amp; Target Generation</div>
+        <div class="step-desc">Map crustal architecture and tectonic evolution to define metallogenic belts and identify first-order targets across Africa, South America, and Central Asia.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-label">Project Scale</div>
+        <div class="step-title">Multi-Layer Data Integration</div>
+        <div class="step-desc">Integrate geological mapping, geochemical sampling, geophysical surveys, and satellite imagery into a unified targeting model.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-label">Target Scale</div>
+        <div class="step-title">Validation &amp; Drill Planning</div>
+        <div class="step-desc">Field verification, detailed sampling, and drill planning &mdash; the definitive test of any exploration hypothesis, overseen across multiple continents.</div>
+      </div>
+    </div>
+    <!-- Technology -->
+    <div class="fu4" style="margin-top:48px"><div class="sl" style="margin-bottom:10px">Technology</div><h2 style="font-size:30px;font-weight:400;color:#0F1E2E;margin-bottom:24px">Technology as a Force Multiplier</h2>
+    <div class="g2">
+      <div class="ch card"><h4 class="dm" style="font-size:14px;font-weight:700;color:#0F1E2E;margin-bottom:6px">Satellite Remote Sensing</h4><p class="bt" style="font-size:13px">Multi-source imagery for rapid alteration zone identification across large license holdings</p></div>
+      <div class="ch card"><h4 class="dm" style="font-size:14px;font-weight:700;color:#0F1E2E;margin-bottom:6px">Machine Learning</h4><p class="bt" style="font-size:13px">AI models trained on geospatial and geochemical datasets to predict concealed mineralization trends</p></div>
+      <div class="ch card"><h4 class="dm" style="font-size:14px;font-weight:700;color:#0F1E2E;margin-bottom:6px">Hyperspectral Analysis</h4><p class="bt" style="font-size:13px">Automated lithology and mineral identification using SWIR/TIR spectral data</p></div>
+      <div class="ch card"><h4 class="dm" style="font-size:14px;font-weight:700;color:#0F1E2E;margin-bottom:6px">Integrated Platforms</h4><p class="bt" style="font-size:13px">Centralised databases enabling real-time collaboration across Singapore, Hong Kong, and field teams</p></div>
+    </div></div>
+    <!-- How We Partner -->
+    <div class="fu5" style="margin-top:48px"><div class="sl" style="margin-bottom:10px">How We Partner</div><h2 style="font-size:30px;font-weight:400;color:#0F1E2E;margin-bottom:20px">Building Local Partnerships. Investing in Early-Stage Assets.</h2>
+    <p class="bt" style="margin-bottom:12px">We believe the best projects are built together. PMH actively seeks partnerships with local license holders, community leaders, junior explorers, and independent operators across our target regions. We are open to all forms of collaboration, from joint ventures and earn-in agreements to full project acquisitions, and we welcome proposals at any stage.</p>
+    <p class="bt" style="margin-bottom:28px">If you have geological potential and local knowledge, we bring the capital, technical team, and international infrastructure to move a project forward.</p>
+    <div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:14px">We Are Actively Looking for Early-Stage Investment Opportunities In:</div>
+    <div class="g3" style="margin-bottom:24px">
+      <div class="ch" style="padding:24px;background:#152740;border:1px solid transparent;border-radius:2px;border-top:3px solid #B8964E"><div style="font-size:22px;font-weight:500;color:#fff;margin-bottom:2px">Gold</div><div class="dm" style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B8964E;margin-bottom:12px">Core Focus</div><p class="dm" style="font-size:12.5px;color:#99AABB;line-height:1.75">Our primary commodity and the foundation of our portfolio. We are seeking gold exploration and near-production assets across West and Southern Africa, from grassroots targets to advanced projects with defined resources.</p></div>
+      <div class="ch card" style="border-top:3px solid #D4836A"><div style="font-size:22px;font-weight:500;color:#0F1E2E;margin-bottom:2px">Copper</div><div class="dm" style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#D4836A;margin-bottom:12px">Strategic Priority</div><p class="dm" style="font-size:12.5px;color:#555;line-height:1.75">A critical metal for the global energy transition. We are interested in copper exploration opportunities in proven geological belts, particularly where polymetallic potential adds upside.</p></div>
+      <div class="ch card" style="border-top:3px solid #6BA3BE"><div style="font-size:22px;font-weight:500;color:#0F1E2E;margin-bottom:2px">Rare Earths &amp; Critical Metals</div><div class="dm" style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#6BA3BE;margin-bottom:12px">Selective Interest</div><p class="dm" style="font-size:12.5px;color:#555;line-height:1.75">We evaluate high-quality rare earth and critical metal opportunities on a selective basis, focusing on jurisdictions with clear regulatory pathways and geological merit.</p></div>
+    </div>
+    <div class="g2">
+      <div class="card"><div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:12px">What We Bring to a Partnership</div><div class="alist"><div><span class="arr">&rarr;</span><span class="txt">Exploration and development capital</span></div><div><span class="arr">&rarr;</span><span class="txt">In-house geological, geochemical, and geophysical expertise</span></div><div><span class="arr">&rarr;</span><span class="txt">Satellite remote sensing and AI-driven target generation</span></div><div><span class="arr">&rarr;</span><span class="txt">International compliance, trading, and offtake infrastructure</span></div><div><span class="arr">&rarr;</span><span class="txt">Long-term commitment, we don&rsquo;t walk away after one season</span></div></div></div>
+      <div class="card"><div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:12px">What We Look For in a Partner</div><div class="alist"><div><span class="arr">&rarr;</span><span class="txt">Genuine local knowledge and community trust</span></div><div><span class="arr">&rarr;</span><span class="txt">Licenses in geologically prospective areas</span></div><div><span class="arr">&rarr;</span><span class="txt">Transparency and willingness to operate within structured frameworks</span></div><div><span class="arr">&rarr;</span><span class="txt">Alignment on long-term value creation, not short-term extraction</span></div><div><span class="arr">&rarr;</span><span class="txt">Openness to working together, we are flexible on deal structure</span></div></div></div>
+    </div></div>
+    <div class="callout" style="margin-top:40px"><h3 style="font-size:18px">Speed Without Compromise</h3><p>As a privately capitalised firm, we are not constrained by fundraising cycles or public reporting timelines. When the data supports a decision, we act, at a pace listed companies cannot match, with the rigour institutional partners expect.</p></div>
+
+    <div class="fu5 card" style="margin-top:40px;padding:32px 36px;border-left:3px solid #5A8F5A"><div class="sl" style="margin-bottom:10px;color:#5A8F5A">Our Commitment to Responsible Operations</div><p class="bt" style="line-height:2">We recognise that mineral exploration operates within communities, ecosystems, and sovereign territories that deserve respect. PMH is committed to responsible environmental stewardship, transparent engagement with local stakeholders, and contributing meaningfully to the social and economic development of the regions where we work. In every jurisdiction, we seek to build partnerships that create lasting value, not just for our investors, but for the people and landscapes that make our work possible.</p></div>
+  </section>
+</div>
+
+<!-- ==================== PROJECTS ==================== -->
+<div id="projects" class="page">
+  <div class="light-hero">
+    <div class="sl fu" style="margin-bottom:10px">Our Portfolio</div>
+    <h1 class="fu1">Active Interests Across Premier Mineral Belts</h1>
+    <div class="fu2" style="width:52px;height:2px;background:#B8964E;margin:14px 0"></div>
+    <p class="fu3 bt" style="max-width:580px">Gold and critical metals across Africa and Southeast Asia, in proven geological provinces.</p>
+  </div>
+  <section style="background:#fff;border-bottom:1px solid #E2DED5"><div style="display:flex;justify-content:center;gap:56px;padding:32px 80px">
+    <div class="fu1" style="text-align:center"><div style="font-size:22px;font-weight:600;color:#0F1E2E">8</div><div class="dm" style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-top:2px">Countries</div></div>
+    <div class="fu2" style="text-align:center"><div style="font-size:22px;font-weight:600;color:#0F1E2E">3</div><div class="dm" style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-top:2px">Regions</div></div>
+    <div class="fu3" style="text-align:center"><div style="font-size:22px;font-weight:600;color:#0F1E2E">Au &middot; Cu &middot; REE</div><div class="dm" style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-top:2px">Commodities</div></div>
+  </div></section>
+
+  <!-- INTERACTIVE MAP -->
+  <section style="background:#0a0c12;padding:56px 80px;position:relative">
+    <div style="text-align:center;margin-bottom:32px">
+      <div class="dm" style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B8964E;font-weight:700;margin-bottom:8px">Where We Operate</div>
+      <h2 style="font-size:28px;font-weight:400;color:#fff;margin:0">Our Global Footprint</h2>
+    </div>
+    <div style="display:flex;gap:48px;align-items:flex-start;justify-content:center;flex-wrap:wrap">
+      <div id="africaMapWrap" style="position:relative;width:520px;max-width:100%">
+        <svg id="africaMap" viewBox="0 0 1000 1001" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+          <path id="AO" data-name="Angola" d="m 495.3,598.6 -36,-0.2 -4.3,1.7 -3.5,-0.3 -5.1,1.9 -1.1,2.7 6,8.7 2.4,9.3 3.6,13.4 -3.8,5.5 -0.6,2.8 2.9,8.3 3.1,8.4 3.6,5 0.6,7.8 -1.4,10.3 -4,6.1 -7.1,9.1 -2.9,5.6 -4.1,12.5 -0.8,5.9 -4.3,12.7 -1.9,12.2 1,8.7 5.9,-2.7 7.2,-2.3 7.8,0.4 7.1,6.3 1.9,-1 48.8,-0.6 8.2,6.6 29.1,2 22.4,-5.7 -7.6,-8.6 -7.8,-11.3 1.6,-44 25.3,0.1 -1,-4.7 2,-5.2 -2,-6.5 1.5,-6.7 -1.2,-4.3 -5.5,-0.8 -7.6,2 -5.3,-0.3 -3,1.3 0.9,-16.5 -3.9,-5.1 -0.8,-8.5 1.9,-8.4 -2.4,-5.3 -0.1,-8.7 -14.8,0.1 1.1,-5 -6.2,0.1 -0.7,2.4 -7.6,0.5 -3.1,8.1 -1.9,3.4 -6.7,-1.9 -4,1.9 -8.1,1.1 -4.6,-7.2 -2.7,-4.5 -3.5,-8.3 -2.9,-10.3 z m -47.4,-2.7 0.4,-6 2,-3.5 4.5,-2.9 -4.6,-4.8 -3.7,2.3 -5,6 3.3,10.4 3.1,-1.5 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="BI" data-name="Burundi" d="m 669,556.1 -0.6,-5.4 0,0 -6.5,-0.9 -3.8,7.9 -7.4,-1.1 3,6.3 0.1,2.4 4.3,13.2 0,0.6 1.2,-0.2 4.5,-5 4.9,-7.2 3,-2.9 -0.1,-4.5 -2.6,-3.2 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="BJ" data-name="Benin" d="m 340,356 -9.3,-8 -4.3,0.1 -4.1,4 -2.6,4.2 -6,1.2 -2.5,6.1 -4.1,1.6 -1.6,7.2 3.7,4.1 4.3,4.9 0.4,6.8 2.5,2.8 -0.5,31.8 3,9.5 10.1,-1.6 0.6,-22.3 -0.3,-8.8 2.3,-8.7 3.7,-4.3 5.9,-8.5 -1.3,-3.7 2.4,-5.6 -2.8,-8.2 0.5,-4.6 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="BF" data-name="Burkina Faso" d="m 300.7,310.8 -7.8,0 -3,-2.6 -6.7,1.9 -11.3,5.8 -2.3,4.3 -9.4,6.2 -1.7,3.6 -5.1,2.8 -5.8,-1.9 -3.4,3.4 -1.8,9.5 -9.7,11.4 0.3,4.7 -3.4,5.9 0.8,8 5.5,3 2.1,4.6 5.4,2.9 4.3,-3.4 5.7,-0.6 8.3,3.6 -1.6,-10.4 0.3,-7.9 21.1,-0.6 5.4,1 3.9,-2.2 5.6,1.1 10.7,0.3 4.1,-1.6 2.5,-6.1 6,-1.2 2.6,-4.2 0.3,-9.5 -14,-3.1 -0.4,-6.7 -6.9,-9 -1.6,-6.3 1,-6.7 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="BW" data-name="Botswana" d="m 600.6,762.7 -2.2,-1 -6.9,3.1 -3.6,0 -7.9,5.4 -4.4,-5.7 -18.7,4.9 -9,0.4 -1.9,49.3 -11.8,0.5 -1.4,40.4 3.2,2 6.5,13.2 -1.5,8.4 2.5,4.9 8.5,-1.4 6.2,-6.2 5.8,-4.2 3.2,-6.6 6,-3.2 4.9,1.7 5.5,3.9 9.6,0.6 7.8,-3.2 1.4,-4.3 2.4,-6.6 6.5,-1.1 3.9,-5.2 4.4,-9.3 11.2,-10.3 17.3,-10.2 -7.3,-6.2 -9.2,-2.1 -3.1,-8.8 0.2,-4.9 -5.1,-1.5 -13,-15.2 -3.5,-8 -2.3,-2.4 -4.2,-11.1 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="CF" data-name="Central African Rep." d="m 587,398.1 -1,-0.7 -4.2,-4 -0.9,-4.3 1.9,-5.7 -0.1,-5.7 -7.2,-8.6 -1.5,-5.9 -7.7,2.3 -6,5.6 -8.6,15.1 -11.3,6.4 -11.8,-0.8 -3.4,1.2 1.2,4.9 -6.3,4.8 -5.1,5.4 -15.3,5.3 -3,-3.1 -2.1,-0.3 -2.2,3.6 -10,1 -6.1,14 -2.9,2.6 -0.8,10.7 1.2,5.8 -0.9,4.1 5.8,7.3 1,4.9 4.6,7.2 5.6,4.4 0.6,6.3 1.3,4 6.3,-12.8 7.3,-7.4 8.2,2.4 7.9,0.7 1,-9.6 4.7,-7.1 6.5,-4.4 10.1,4.7 7.8,5.1 9,1.4 9.1,2.7 3.6,-8.4 1.6,-1.1 5.6,1.4 13.5,-6.9 4.9,3 3.9,-0.5 1.8,-3.3 4.5,-1.2 9.2,1.4 7.9,0.4 4,-1.5 -2,-4.4 -9.2,-5.5 -3.2,-8.3 -5.2,-6 -8.3,-7.2 -0.1,-4.5 -6.8,-5.5 -8.4,-5.4 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="CI" data-name="Côte d'Ivoire" d="m 230.4,373.8 -5,2.1 -2.9,1.7 -1.8,-5.9 -3.5,1.6 -2.1,-0.3 -2.3,4 -9.4,-0.1 -3.3,-2.1 -1.6,1.3 -2.5,1.1 -1,4.7 2.8,5.7 3,11.1 -4.6,1.6 -1.1,1.9 0.9,2.7 -0.8,6.1 -1.9,0 -0.6,4 1.2,6.7 -2.7,6.1 3.6,3.8 3.8,0.9 5.2,5.8 0.3,5.5 -1.1,1.7 -1,11.4 2.3,0.4 12.1,-5.1 8.5,-4 14.5,-2.4 7.8,-0.2 8.5,2.7 5.6,-0.1 0.5,-5.5 -5.2,-11.9 3.2,-15.6 5.1,-11.6 -3.2,-19.7 -8.3,-3.6 -5.7,0.6 -4.3,3.4 -5.4,-2.9 -2.1,-4.6 -5.5,-3 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="CM" data-name="Cameroon" d="m 477.5,366.6 0.4,-9.2 -1,-9.1 -4.9,-8.9 -3.4,0.8 -0.4,4.4 4.9,5.5 -1.3,2.5 -0.5,4.6 -10.2,10.7 -3.1,8.8 -1.6,7.2 -2.6,3.1 -2.4,9.7 -6.4,5.7 -1.9,7 -2.7,5.6 -1.1,5.7 -8.3,4.7 -6.9,-5.7 -4.6,0.2 -7.2,8.1 -3.6,0.1 -5.7,13.4 -3.1,9.8 -0.1,3.8 3.1,2 2.5,6.2 5.6,2.3 4.8,9.2 -1.8,10.9 19.9,0.3 5.8,-0.9 7.4,1.9 7.3,-1.8 1.5,0.7 15.4,0.6 9.9,3.6 9.7,3.3 0.9,-7.5 -1.3,-4 -0.6,-6.3 -5.6,-4.4 -4.6,-7.2 -1,-4.9 -5.8,-7.3 0.9,-4.1 -1.2,-5.8 0.8,-10.7 2.9,-2.6 6.1,-14 1.8,-3.7 -3.9,-9.6 -1.8,-5.7 -5.3,-2.3 -7.2,-8.1 2.5,-6.5 5.6,1.3 3.4,-0.9 6.8,0.1 -6.8,-12.6 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="CD" data-name="Dem. Rep. Congo" d="m 618.3,446 -9.2,-1.4 -4.5,1.2 -1.8,3.3 -3.9,0.5 -4.9,-3 -13.5,6.9 -5.6,-1.4 -1.6,1.1 -3.6,8.4 -9.1,-2.7 -9,-1.4 -7.8,-5.1 -10.1,-4.7 -6.5,4.4 -4.7,7.1 -1,9.6 -0.7,8.4 -3.6,7.4 -2.4,8.6 -1.5,12.3 0.7,7.8 -2,4.8 -0.3,5.1 -1.4,4.4 -8.1,6.7 -5.6,7.1 -5.3,13.4 0.3,11.4 -3.1,4.4 -7.2,6.8 -7.2,8.7 -4.5,-2.5 -0.8,-3.9 -6.6,-0.1 -4.2,5.3 -3.2,-1.4 -4.5,2.9 -2,3.5 -0.4,6 -3.1,1.5 1.6,4.3 5.1,-1.9 3.5,0.3 4.3,-1.7 36,0.2 2.9,10.3 3.5,8.3 2.7,4.5 4.6,7.2 8.1,-1.1 4,-1.9 6.7,1.9 1.9,-3.4 3.1,-8.1 7.6,-0.5 0.7,-2.4 6.2,-0.1 -1.1,5 14.8,-0.1 0.1,8.7 2.4,5.3 -1.9,8.4 0.8,8.5 3.9,5.1 -0.9,16.5 3,-1.3 5.3,0.3 7.6,-2 5.5,0.8 4.2,0.3 0.6,4.3 5.7,-0.3 7.7,1.3 3.9,6.2 9.7,2 7.5,-4.4 2.6,7.3 9.2,1.9 4.3,5.9 4.8,7.6 9.3,0.1 -0.6,-14.9 -3.4,2.5 -8.4,-5.4 -3.2,-2.4 1.9,-13.9 2.5,-16.4 -2.6,-6.1 3.6,-8.8 3.3,-1.7 16.4,-2.3 2.1,0.6 0.6,-2.3 -3.4,-3.7 -1.5,-7.6 -7.3,-7.6 -4.1,-9.9 2.3,-5.8 -3.2,-7.8 2.4,-22.1 0.1,0.2 -0.1,-2.4 -3,-6.3 1.2,-7.6 1.7,-1 0.5,-8.3 3.5,-3.8 0.1,-10.5 2.9,-5.3 0.6,-11.1 2.6,-6.4 4.6,-7.2 4.7,-3.7 3.9,-4.9 -4.9,-1.9 0.6,-16.1 0,0 -10.9,-9.2 -2.9,-5.9 -6.8,2.9 -5.7,-0.9 -3.2,2.3 -5.5,-1.7 -7.5,-11.4 -4,1.5 -7.9,-0.4 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="CG" data-name="Congo" d="m 521.5,468.8 -7.9,-0.7 -8.2,-2.4 -7.3,7.4 -6.3,12.8 -0.9,7.5 -9.7,-3.3 -9.9,-3.6 -15.4,-0.6 -0.9,6.1 3.4,7.1 9.1,-1.1 3.1,2.7 -5.3,16.1 5.8,8.2 1.3,10.8 -1.6,9.2 -3.7,6.5 -10.8,-0.6 -6.5,-6.6 -1,6.1 -8.3,1.7 -4.2,3.5 4.6,9.1 -9.3,7.7 9.9,14.6 5,-6 3.7,-2.3 4.6,4.8 3.2,1.4 4.2,-5.3 6.6,0.1 0.8,3.9 4.5,2.5 7.2,-8.7 7.2,-6.8 3.1,-4.4 -0.3,-11.4 5.3,-13.4 5.6,-7.1 8.1,-6.7 1.4,-4.4 0.3,-5.1 2,-4.8 -0.7,-7.8 1.5,-12.3 2.4,-8.6 3.6,-7.4 0.7,-8.4 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="DJ" data-name="Djibouti" d="m 820.3,358.7 -5.3,-3.8 6.8,-3.3 0.1,-5.7 -3,-4.3 -3.6,3.4 -5.2,-1.2 -4,6.1 -3.9,6.5 1.1,3.8 0.3,4.2 6.8,0.2 2.9,-0.9 2.8,2.4 4.2,-7.4 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="DZ" data-name="Algeria" d="M 392.4,5.7 384.6,6.5 379.8,3.3 367.6,3.4 357,8.9 351.2,6.8 332.3,8 l -19.4,2.5 -11,4.3 -7.2,5.8 -12.4,2.4 -11.1,7.7 4.2,9 0.7,8.4 3.9,14.7 3.1,2.9 -2.2,5.4 -15.2,2.3 -5.4,5.1 -6.7,1.2 -0.6,10.2 -13.8,5.4 -4.6,7 -9.6,3.7 -11.8,2.1 -19.2,10.2 -0.2,16.3 0,1 -0.3,2.7 44.1,33.5 40,30.2 40.4,30.2 2.9,6.4 7.5,4 5.5,2.2 0.2,8.8 13.3,-1.3 16.9,-6.2 34.5,-27.1 40.5,-26.4 -5.4,-8.7 -9.6,-6.4 -5.5,2.5 -4.3,-7.7 -0.6,-5.9 -7.2,-10.1 4.6,-5.8 -1.3,-8.7 1.4,-7.6 -1,-6.3 1.8,-11.3 -0.8,-6.4 -4.1,-12.2 -5.7,-24.7 -7.3,-5.6 -0.2,-3.3 -9.7,-8.3 -1.3,-10.4 7,-7.8 2.4,-11.6 -2.3,-13.4 2.2,-7.2 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="EG" data-name="Egypt" d="m 628.8,88.1 -11.9,-4 -11.5,-3.7 -15.6,0.2 -3.7,6.6 2.2,5.9 -2.4,8.5 4.2,11.2 2.9,49.2 2.2,50.9 48.1,0 46.4,0 47.4,0 -2.2,-2.8 -14.7,-12.4 -0.9,-9 2.2,-2.4 -11.6,-15.3 -4.4,-7.9 -4.9,-7.5 -10.5,-21.6 -8.4,-13.9 -6.1,-14.5 1.1,-1.3 10.1,19.8 5.8,6.2 4.3,4.4 2.5,-2.4 2.7,-7.2 1.6,-10.4 2.8,-5.6 -1.5,-3.5 -8.5,-20.1 0,0 -5.4,3.4 -9.2,-0.8 -9.6,-3.2 -2.3,4.5 -3.8,-6.8 -8.5,-1.8 -10.2,1.2 -4.5,3.9 -8.6,4.4 -5.6,-2.2 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="ER" data-name="Eritrea" d="m 777.6,303.8 -7,-6.8 -4,-12.7 -7.8,-16 -5.7,7.9 -8.8,2.3 -3.6,4.2 -0.7,9.2 -4.3,20.3 1.5,5.6 14.3,2.9 3.3,-10.4 7.6,6.3 7,-3.2 3,2.9 8.3,0.1 10.8,5.6 3.4,4.8 5.5,4.4 5.4,8.1 4.3,4.5 5.2,1.2 3.6,-3.4 -6.2,-4.2 -4,-4.7 -6.9,-8 -7.1,-7.9 -17.1,-13 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="ET" data-name="Ethiopia" d="m 754.8,310.3 -3.3,10.4 -14.3,-2.9 -1.4,11.9 -4.5,13.6 -7.1,6.8 -4.8,10.6 -1.1,5.7 -5.6,3.8 -3.3,14.5 0.1,1.7 0.4,10.8 -1.8,4.2 -6.4,0.3 -4,7.9 7.5,1 6.3,6.7 2.2,5.6 5.7,3.2 7.4,15 6.4,2.4 0.1,7.7 4.2,4.6 8.5,0 15.7,11.7 3.8,0.2 2.9,-0.4 2.7,1.6 8.2,1.1 3.5,-5.8 11.1,-5.8 4.9,4.7 8.4,0 3.3,-4.4 7.8,-0.2 10.7,-9.8 15.9,-0.6 33.5,-41.5 -10.3,0.1 -40.3,-16.4 -4.8,-5 -4.6,-6.6 -4.8,-7.7 2.5,-4.9 -2.8,-2.4 -2.9,0.9 -6.8,-0.2 -0.3,-4.2 -1.1,-3.8 3.9,-6.5 4,-6.1 -4.3,-4.5 -5.4,-8.1 -5.5,-4.4 -3.4,-4.8 -10.8,-5.6 -8.3,-0.1 -3,-2.9 -7,3.2 -7.6,-6.3 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="GA" data-name="Gabon" d="m 455.9,485.9 -1.5,-0.7 -7.3,1.8 -7.4,-1.9 -5.8,0.9 0.1,16.7 -17.7,-0.2 -4.2,0.8 -2.4,10.3 -3,10.1 -2.7,4.4 -0.3,4.6 7.3,14.3 8.1,11.4 12.5,14 9.3,-7.7 -4.6,-9.1 4.2,-3.5 8.3,-1.7 1,-6.1 6.5,6.6 10.8,0.6 3.7,-6.5 1.6,-9.2 -1.3,-10.8 -5.8,-8.2 5.3,-16.1 -3.1,-2.7 -9.1,1.1 -3.4,-7.1 0.9,-6.1 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="GH" data-name="Ghana" d="m 296.4,364.9 -5.6,-1.1 -3.9,2.2 -5.4,-1 -21.1,0.6 -0.3,7.9 1.6,10.4 3.2,19.7 -5.1,11.6 -3.2,15.6 5.2,11.9 -0.5,5.5 10.9,3.9 11,-4 6.7,-4.7 19.2,-8.1 -2.8,-4.9 -3.2,-8.8 -1,-6.8 2.7,-12.5 -3,-5 -1.2,-10.9 0,-10.1 -5.1,-7.1 0.9,-4.3 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="GN" data-name="Guinea" d="m 156.4,345.2 -1.8,0.7 -6.6,-1.1 -0.9,1.6 -2.7,0.3 -8.7,-3.4 -5.8,-0.1 -0.3,4.7 -1.3,1.4 0.9,4.6 -1.9,1.8 -2.7,0.1 -3.2,2.3 -3.7,-0.3 -5.5,6.8 3.6,2.2 1.7,3.1 1.3,6.1 3,2.7 3.1,1.8 4.7,5.4 5.3,8.2 6.5,-6.1 1.5,-3.8 2.1,-3 3.3,-0.3 2.9,-2.6 9.7,0 3.3,5 2.6,5.8 -0.4,4 1.9,3.6 -0.1,5.1 3.3,-0.8 2.6,-0.3 3.2,-1.6 5.1,8.5 -0.9,5.6 2.4,2.9 3.4,0.1 2.6,-5.6 3.4,0.4 1.9,0 0.8,-6.1 -0.9,-2.7 1.1,-1.9 4.6,-1.6 -3,-11.1 -2.8,-5.7 1,-4.7 2.5,-1.1 -3.7,-4 0.7,-4.1 -1.6,-1.6 -2.6,1.3 0.6,-4.5 2.5,-3.5 -5,-5.8 -1.4,-3.8 -2.7,-3.1 -2.4,-0.3 -2.9,1.9 -4,1.8 -3.3,3 -5.2,-1.1 -3.3,-3.5 -2,-0.4 -3.2,1.8 -2,0 -0.6,-5 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="GM" data-name="Gambia" d="m 91.9,335.4 11,0.2 3,-1.9 2.2,-0.1 4.5,-3.2 5.2,2.9 5.2,0.3 5.3,-3.1 -2.4,-4 -4,2.3 -3.8,-0.1 -4.7,-3.4 -3.8,0.2 -2.8,3.3 -13.2,0.4 -1.7,6.2 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="GW" data-name="Guinea-Bissau" d="m 129.9,343.2 -22.4,-0.6 -3.3,1.6 -4,-0.5 -6.5,2.3 0.7,2.9 3.7,3 -0.1,2.1 2.7,3.9 5.1,0.9 6.4,5.8 5.5,-6.8 3.7,0.3 3.2,-2.3 2.7,-0.1 1.9,-1.8 -0.9,-4.6 1.3,-1.4 0.3,-4.7 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="GQ" data-name="Eq. Guinea" d="m 433.9,486 -19.9,-0.3 -4.1,15.5 2.2,2.1 4.2,-0.8 17.7,0.2 -0.1,-16.7 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="KE" data-name="Kenya" d="m 807.2,463.1 -8.4,0 -4.9,-4.7 -11.1,5.8 -3.5,5.8 -8.2,-1.1 -2.7,-1.6 -2.9,0.4 -3.8,-0.2 -15.7,-11.7 -8.5,0 -4.2,-4.6 -0.1,-7.7 -6.4,-2.4 -8.1,9.1 -7.4,8.3 5.9,9.6 1.5,7 5.5,15.8 -4.4,10.1 -5.9,9.2 -3.5,5.6 0,0.7 2.9,5.2 -0.8,10.3 44.1,28.2 0.7,8 17.3,13.8 5,-4.6 2.5,-9.2 4,-5.5 1.9,-9.8 4.6,-1 3.1,-5.8 8.6,-5.5 -7.2,-11.4 -0.4,-50.4 10.5,-15.7 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="LR" data-name="Liberia" d="m 193.3,411 -3.4,-0.4 -2.6,5.6 -3.4,-0.1 -2.4,-2.9 0.9,-5.6 -5.1,-8.5 -3.2,1.6 -2.6,0.3 -5.7,6.5 -5.5,7.5 -0.7,4 -2.9,4.4 8.1,8.9 10.4,7.6 11,10.5 12.6,6.6 3.2,-0.1 1,-11.4 1.1,-1.7 -0.3,-5.5 -5.2,-5.8 -3.8,-0.9 -3.6,-3.8 2.7,-6.1 -1.2,-6.7 0.6,-4 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="LY" data-name="Libya" d="m 589.8,80.6 -3.1,-4.5 -11.7,-1.6 -3.9,-2.4 -4.4,0 -4.4,-6.2 -15.9,-2.8 -7.9,1.8 -7.9,6.5 -3.3,6.7 3.4,10.6 -5.3,6.3 -5.5,3.6 L 507,91.7 490.3,86 479.7,83.3 473.6,71 l -15.7,-6.1 -9.8,-2.3 -4.8,1.2 -13.8,-4.8 -0.3,10.6 -5.6,4 -3.4,4.4 -7.9,5.3 1.5,5.7 -0.9,5.8 -5.6,3.2 4.1,12.2 0.8,6.4 -1.8,11.3 1,6.3 -1.4,7.6 1.3,8.7 -4.6,5.8 7.2,10.1 0.6,5.9 4.3,7.7 5.5,-2.5 9.6,6.4 5.4,8.7 19,6 6.9,7.5 8.3,-5.1 11.9,-7.6 48.4,26.5 48.7,26.5 -0.1,-5.8 13.8,0 -1,-27.7 -2.2,-50.9 -2.9,-49.2 -4.2,-11.2 2.4,-8.5 -2.2,-5.9 3.7,-6.6 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="LS" data-name="Lesotho" d="m 625.3,939.9 2.5,-4.4 6.7,-2.2 2.4,-4.5 4.1,-6.7 -3.8,-4.2 -4.8,-4.2 -5.7,2.8 -6.8,5.4 -6.9,8.7 8,10.6 4.3,-1.3 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="MA" data-name="Morocco" d="m 271.2,30.7 -5,-0.1 -11.9,-3.1 -11,0.9 -6.8,-5.9 -8.5,-0.1 -3.8,8.6 -8,14.5 -8.7,5.7 -11.8,6.4 -7.7,9.3 -1.8,7.3 -4.8,11.8 2.5,17.2 -10.1,11.5 -6,3.7 -9.6,9.4 -11,1.6 -6.1,5.3 -0.2,0.2 -7.9,14.1 -8.1,5.1 -4.5,8.5 -0.5,7.4 -3.4,8.1 -4,2.2 -6.9,8.8 -4.4,9.8 0.7,4.6 -4.1,7.3 -4.7,3.7 -0.8,6.4 0.2,0.1 27,-1.1 1.6,-5 5,-6.2 4.4,-19.1 16.9,-15 6,-17.4 3.7,-1.1 4.2,-10.8 10,-1.4 4.2,1.8 5.4,0 3.9,-3.2 7.3,-0.4 -0.1,-7.5 0,0 1.8,0 0.2,-16.3 19.2,-10.2 11.8,-2.1 9.6,-3.7 4.6,-7 13.8,-5.4 0.6,-10.2 6.7,-1.2 5.4,-5.1 15.2,-2.3 2.2,-5.4 -3.1,-2.9 -3.9,-14.7 -0.7,-8.4 -4.2,-9 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="MG" data-name="Madagascar" d="m 902.9,704.8 -2.5,-9.1 -3,-5.9 -3.9,-5.9 -4.3,6.2 -0.7,8.3 -7.1,9.6 -5.1,-1.7 1.3,6 -4,6.9 -10.4,8.5 -7.3,7.9 -5.4,0.2 -4.6,2.5 -6.9,2.8 -6,0.6 -2.2,8.7 -4.7,7.8 0.2,12.7 1.7,8.7 2.4,6.6 -1.7,8.8 -6.4,10.5 -0.3,4.6 -5.7,2.4 -2.8,10 0.4,9.9 3.4,11 -0.1,12.3 2.6,7.3 9.1,5 6.5,3.5 10.9,-5.8 9.9,-3.3 6.8,-16.1 6.1,-19.2 9.3,-26.2 7.3,-19.1 5.9,-16.1 1.6,-11.7 3.5,-3.2 1.5,-5.9 -1.7,-10.2 2.6,-4.1 3.5,8.1 2.4,-4.1 1.7,-6.6 -2.8,-6.5 -1,-16.7 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="ML" data-name="Mali" d="m 347.4,252.3 -13.3,1.3 -0.2,-8.8 -5.5,-2.2 -7.5,-4 -2.9,-6.4 -40.4,-30.2 -40,-30.2 -18.2,0.2 5.1,59.7 5.4,59.7 2,1.8 -2.7,9.6 -48.5,0.2 -1.9,3.1 -4.6,-0.9 -6.9,2.7 -8.4,-3.8 -3.8,0.3 -2.2,8.2 -4.1,2.5 0.4,8.6 2.3,7.9 4.5,3.9 1,5.3 -0.6,4.4 0.6,5 2,0 3.2,-1.8 2,0.4 3.3,3.5 5.2,1.1 3.3,-3 4,-1.8 2.9,-1.9 2.4,0.3 2.7,3.1 1.4,3.8 5,5.8 -2.5,3.5 -0.6,4.5 2.6,-1.3 1.6,1.6 -0.7,4.1 3.7,4 1.6,-1.3 3.3,2.1 9.4,0.1 2.3,-4 2.1,0.3 3.5,-1.6 1.8,5.9 2.9,-1.7 5,-2.1 -0.8,-8 3.4,-5.9 -0.3,-4.7 9.7,-11.4 1.8,-9.5 3.4,-3.4 5.8,1.9 5.1,-2.8 1.7,-3.6 9.4,-6.2 2.3,-4.3 11.3,-5.8 6.7,-1.9 3,2.6 7.8,0 7.7,-0.6 4.5,-4.9 16.5,-1.2 10.7,-2.2 1,-8.5 6.6,-9.2 -0.3,-31.9 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="MZ" data-name="Mozambique" d="m 788.2,666.2 -1.7,-6.2 0,0 0,0 -10,8.1 -13.4,5.3 -7.3,-0.2 -4.5,4.2 -8.4,0.3 -3.3,1.8 -14.4,-3.9 -4.7,0.5 -3.3,13.1 1.4,15.8 0.7,0 4.2,4.4 4.6,10 0.3,17.8 -5.4,3 -4.1,9.6 -7.5,-8.6 -0.5,-9.7 2.9,-6.5 -0.5,-5.5 -4.7,-3.5 -3.3,1.2 -6.8,-6.6 -37.1,11.4 0.8,9.9 0.6,5.1 10,-0.3 5.5,3 2.5,3.4 5.7,1 6.1,4.4 -0.8,17.5 -2.8,9.6 -1,10.4 1.7,4.1 -1.7,8.1 -1.9,1.3 -3.6,9.9 -13.4,15.7 4.7,19.5 2.5,9.9 -3,15.4 0.7,5 1.3,6.2 0.6,6.1 9,0.1 1.5,-7.3 -2.9,-0.9 -0.6,-5.8 5.5,-5.2 14.8,-7.5 10.1,-4.6 5.3,-5 2.1,-5.7 -2.7,-2.4 2.4,-6.4 1.1,-13.6 -2.2,0.7 0.1,-4.1 -1.9,-8.1 -5.2,-10.5 1.6,-9.9 5.1,-3.2 8.9,-9.8 4.7,-2.5 14.4,-14.9 14,-6.7 11.3,-5.3 8.1,-8.5 5.2,-9.6 4.1,-9.9 -1.8,-6.8 0.4,-21.6 -1,-12.2 0.9,-13.8 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="MR" data-name="Mauritania" d="m 237.6,171.8 -44.1,-33.5 -0.5,20.9 -38.9,-0.7 -0.4,35.4 -11.2,1.3 -3.1,7.1 1.9,20 -46.9,-0.1 -2.7,4.6 6.1,6 3,6.5 -1.4,6.9 1.3,6.9 1,13.7 -1.8,13 -3.5,6.8 0.9,7.5 4.2,-4.5 6,1.2 5.9,-3 6.8,-0.1 5.7,4 7.9,3.7 7.2,10.2 7.8,9.5 4.1,-2.5 2.2,-8.2 3.8,-0.3 8.4,3.8 6.9,-2.7 4.6,0.9 1.9,-3.1 48.5,-0.2 2.7,-9.6 -2,-1.8 -5.4,-59.7 -5.1,-59.7 18.2,-0.2 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="MW" data-name="Malawi" d="m 714.6,711.7 0.3,-5.2 -2.7,-4.1 0.4,-6 -3.3,-10.2 3.7,-7.7 -0.2,-16.7 -4.1,-8.9 0.4,-1.5 0,0 -2.3,-3.8 -11.9,-2.6 5.6,6.2 2.8,11.7 -2.2,3.8 -2.7,11.2 2,11.5 -4,4.8 -4.1,12.8 6.2,3.6 6.8,6.6 3.3,-1.2 4.7,3.5 0.5,5.5 -2.9,6.5 0.5,9.7 7.5,8.6 4.1,-9.6 5.4,-3 -0.3,-17.8 -4.6,-10 -4.2,-4.4 -0.7,0 0.1,1.9 2.3,0.5 2.2,7.4 -0.4,1.7 -4.1,-5.3 -2.2,3.4 -1.9,-2.9 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="NA" data-name="Namibia" d="m 576,759.7 -22.4,5.7 -29.1,-2 -8.2,-6.6 -48.8,0.6 -1.9,1 -7.1,-6.3 -7.8,-0.4 -7.2,2.3 -5.9,2.7 0.6,10.6 9.5,13.5 2.5,8.7 6,16.6 5.9,11.4 4.6,5.7 1.3,7.6 -0.1,16.5 3.4,21.3 2.6,10.1 2.2,13.4 4.3,10.1 8.3,10.5 6,-6.8 4.5,3.7 1.7,6 5.2,1 7.3,2.6 6.4,-1 10.8,-7.1 2.2,-51.1 1.4,-40.4 11.8,-0.5 1.9,-49.3 9,-0.4 18.7,-4.9 4.4,5.7 7.9,-5.4 3.6,0 6.9,-3.1 0,-1.2 -4.7,-3.1 -7.8,-0.8 -9.9,3.1 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="NE" data-name="Niger" d="m 458.3,198.6 -19,-6 -40.5,26.4 -34.5,27.1 -16.9,6.2 0.3,31.9 -6.6,9.2 -1,8.5 -10.7,2.2 -16.5,1.2 -4.5,4.9 -7.7,0.6 -1,6.7 1.6,6.3 6.9,9 0.4,6.7 14,3.1 -0.3,9.5 4.1,-4 4.3,-0.1 9.3,8 0.8,-12.4 3.5,-5.5 1.6,-8 3.2,-3 13,-1.6 12.2,5.1 4.6,5.3 6.1,0.2 5.8,-3.4 14.7,7.1 6.2,-0.3 7.1,-5.9 7.1,0.4 3.5,-1.9 6.5,0.8 9.4,4 9.4,-7.7 2.9,0.6 8.4,15.1 2.2,-0.3 0.4,-4.4 3.4,-0.8 1.1,-6.5 -7.8,-0.3 -0.1,-8.9 -5.1,-5.2 4.9,-18.2 15.2,-13 0.2,-18 4,-28.1 2.5,-6 -5.1,-4.7 -0.3,-4.4 -4.6,-3.6 -3.4,-21.5 -8.3,5.1 -6.9,-7.5 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="NG" data-name="Nigeria" d="m 468.2,344.6 -2.2,0.3 -8.4,-15.1 -2.9,-0.6 -9.4,7.7 -9.4,-4 -6.5,-0.8 -3.5,1.9 -7.1,-0.4 -7.1,5.9 -6.2,0.3 -14.7,-7.1 -5.8,3.4 -6.1,-0.2 -4.6,-5.3 -12.2,-5.1 -13,1.6 -3.2,3 -1.6,8 -3.5,5.5 -0.8,12.4 -0.5,4.6 2.8,8.2 -2.4,5.6 1.3,3.7 -5.9,8.5 -3.7,4.3 -2.3,8.7 0.3,8.8 -0.6,22.3 10.7,0 9.2,-0.1 8.6,9.1 4.1,10 6.5,8.6 9.8,0.3 4.7,-3.1 4.6,0.8 12.7,-5 3.1,-9.8 5.7,-13.4 3.6,-0.1 7.2,-8.1 4.6,-0.2 6.9,5.7 8.3,-4.7 1.1,-5.7 2.7,-5.6 1.9,-7 6.4,-5.7 2.4,-9.7 2.6,-3.1 1.6,-7.2 3.1,-8.8 10.2,-10.7 0.5,-4.6 1.3,-2.5 -4.9,-5.5 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="RW" data-name="Rwanda" d="m 667.9,533 -7.4,4.3 -2.9,-1.4 -3.5,3.8 -0.5,8.3 -1.7,1 -1.2,7.6 7.4,1.1 3.8,-7.9 6.5,0.9 0,0 3.5,-1.8 0.8,-8.1 -4.8,-7.8 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="EH" data-name="W. Sahara" d="m 193.8,134.6 -1.8,0 0,0 0.1,7.5 -7.3,0.4 -3.9,3.2 -5.4,0 -4.2,-1.8 -10,1.4 -4.2,10.8 -3.7,1.1 -6,17.4 -16.9,15 -4.4,19.1 -5,6.2 -1.6,5 -27,1.1 -0.2,-0.1 -0.6,5.9 2.7,-4.6 46.9,0.1 -1.9,-20 3.1,-7.1 11.2,-1.3 0.4,-35.4 38.9,0.7 0.5,-20.9 0.3,-2.7 0,-1 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="SD" data-name="Sudan" d="m 740,291.9 0.7,-9.2 3.6,-4.2 8.8,-2.3 5.7,-7.9 -6.9,-5.1 -4.8,-3.4 -5.3,-16.5 -2.5,-14.3 2.5,-2.5 -4.7,-13.6 -47.4,0 -46.4,0 -48.1,0 1,27.7 -13.8,0 0.1,5.8 2.4,54.9 -10.5,-0.9 -5.2,10.2 -3,8.5 2.6,3.2 -3.8,4.3 1.5,5.7 -3,5.8 -1.2,5 4.3,-0.8 2.6,5.4 0.3,8 4.6,4.1 -0.1,3.4 1.5,5.9 7.2,8.6 0.1,5.7 -1.9,5.7 0.9,4.3 4.2,4 1,0.7 3.8,-1.6 4.1,-2.6 2.9,-12.3 3.2,-6.4 8.8,-1.9 2.1,3.8 6.5,8 3.3,1.2 4.4,-2.3 8.7,0.4 1.8,2.9 12.1,0 0.3,-2.9 6.3,-2.6 1.1,-4 4.6,-2.9 10.4,8.1 6.2,-1.4 5.8,-10 6.5,-7.6 -1.3,-8.3 -3,-4 7.3,-0.8 0.7,-3 5.7,0.9 -1.2,10.2 1.7,10 6.5,5.5 1.5,4.7 0,6.9 1.7,0.3 -0.1,-1.7 3.3,-14.5 5.6,-3.8 1.1,-5.7 4.8,-10.6 7.1,-6.8 4.5,-13.6 1.4,-11.9 -1.5,-5.6 4.3,-20.3 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="SS" data-name="S. Sudan" d="m 707.8,379.2 -1.5,-4.7 -6.5,-5.5 -1.7,-10 1.2,-10.2 -5.7,-0.9 -0.7,3 -7.3,0.8 3,4 1.3,8.3 -6.5,7.6 -5.8,10 -6.2,1.4 -10.4,-8.1 -4.6,2.9 -1.1,4 -6.3,2.6 -0.3,2.9 -12.1,0 -1.8,-2.9 -8.7,-0.4 -4.4,2.3 -3.3,-1.2 -6.5,-8 -2.1,-3.8 -8.8,1.9 -3.2,6.4 -2.9,12.3 -4.1,2.6 -3.8,1.6 8.4,5.4 6.8,5.5 0.1,4.5 8.3,7.2 5.2,6 3.2,8.3 9.2,5.5 2,4.4 7.5,11.4 5.5,1.7 3.2,-2.3 5.7,0.9 6.8,-2.9 2.9,5.9 10.9,9.2 0,0 5,-3.8 7.8,3.1 9.8,-3.3 8.6,0.1 7.4,-6.4 7.4,-8.3 8.1,-9.1 -7.4,-15 -5.7,-3.2 -2.2,-5.6 -6.3,-6.7 -7.5,-1 4,-7.9 6.4,-0.3 1.8,-4.2 -0.4,-10.8 -1.7,-0.3 0,-6.9 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="SN" data-name="Senegal" d="m 148.8,315.1 -7.8,-9.5 -7.2,-10.2 -7.9,-3.7 -5.7,-4 -6.8,0.1 -5.9,3 -6,-1.2 -4.2,4.5 -3,7.1 -6.1,9.7 -5.4,2.6 6,4.9 4.8,10.8 13.2,-0.4 2.8,-3.3 3.8,-0.2 4.7,3.4 3.8,0.1 4,-2.3 2.4,4 -5.3,3.1 -5.2,-0.3 -5.2,-2.9 -4.5,3.2 -2.2,0.1 -3,1.9 -11,-0.2 1.8,10.6 6.5,-2.3 4,0.5 3.3,-1.6 22.4,0.6 5.8,0.1 8.7,3.4 2.7,-0.3 0.9,-1.6 6.6,1.1 1.8,-0.7 0.6,-4.4 -1,-5.3 -4.5,-3.9 -2.3,-7.9 -0.4,-8.6 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="SL" data-name="Sierra Leone" d="m 171.5,401 -3.3,0.8 0.1,-5.1 -1.9,-3.6 0.4,-4 -2.6,-5.8 -3.3,-5 -9.7,0 -2.9,2.6 -3.3,0.3 -2.1,3 -1.5,3.8 -6.5,6.1 1.4,10.3 2.1,5 6.3,7.4 8.7,5.6 3.3,1 2.9,-4.4 0.7,-4 5.5,-7.5 5.7,-6.5 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="SZ" data-name="Swaziland" d="m 674,874.9 -5.8,-2.6 -3.5,1 -1.4,4 -3.6,5.2 -0.2,4.8 6.6,7.5 7,-1.5 2.8,-6.1 -0.6,-6.1 -1.3,-6.2 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="TD" data-name="Chad" d="m 582.5,246.4 -48.7,-26.5 -48.4,-26.5 -11.9,7.6 3.4,21.5 4.6,3.6 0.3,4.4 5.1,4.7 -2.5,6 -4,28.1 -0.2,18 -15.2,13 -4.9,18.2 5.1,5.2 0.1,8.9 7.8,0.3 -1.1,6.5 4.9,8.9 1,9.1 -0.4,9.2 6.8,12.6 -6.8,-0.1 -3.4,0.9 -5.6,-1.3 -2.5,6.5 7.2,8.1 5.3,2.3 1.8,5.7 3.9,9.6 -1.8,3.7 10,-1 2.2,-3.6 2.1,0.3 3,3.1 15.3,-5.3 5.1,-5.4 6.3,-4.8 -1.2,-4.9 3.4,-1.2 11.8,0.8 11.3,-6.4 8.6,-15.1 6,-5.6 7.7,-2.3 0.1,-3.4 -4.6,-4.1 -0.3,-8 -2.6,-5.4 -4.3,0.8 1.2,-5 3,-5.8 -1.5,-5.7 3.8,-4.3 -2.6,-3.2 3,-8.5 5.2,-10.2 10.5,0.9 -2.4,-54.9 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="TG" data-name="Togo" d="m 307.1,365.2 -10.7,-0.3 -0.9,4.3 5.1,7.1 0,10.1 1.2,10.9 3,5 -2.7,12.5 1,6.8 3.2,8.8 2.8,4.9 9.8,-3 -3,-9.5 0.5,-31.8 -2.5,-2.8 -0.4,-6.8 -4.3,-4.9 -3.7,-4.1 1.6,-7.2 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="TN" data-name="Tunisia" d="m 429.5,59 -4.5,-2.2 -3.2,-6.6 -6,-0.2 -2.4,-7.6 7.3,-7 1.1,-12.1 -4.1,-3.5 -0.2,-6.5 5.5,-7 -0.9,-2.7 -9.5,5.2 0.1,-7.1 -8.1,-1.7 -12.2,5.7 -2.2,7.2 2.3,13.4 -2.4,11.6 -7,7.8 1.3,10.4 9.7,8.3 0.2,3.3 7.3,5.6 5.7,24.7 5.6,-3.2 0.9,-5.8 -1.5,-5.7 7.9,-5.3 3.4,-4.4 5.6,-4 0.3,-10.6 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="TZ" data-name="Tanzania" d="m 672.2,531.3 -4.3,1.7 4.8,7.8 -0.8,8.1 -3.5,1.8 0,0 0.6,5.4 2.6,3.2 0.1,4.5 -3,2.9 -4.9,7.2 -4.5,5 -1.2,0.2 -0.7,5.9 2.3,2 -0.5,5.9 2.3,5.5 -2.9,5.3 9.7,9.4 0.8,8.5 5.9,14.2 0,0 0.6,0.4 4.8,2.3 7.7,2.4 6.8,4.1 11.9,2.6 2.3,3.8 0,0 0.8,-2.7 6.2,7.4 0.6,14.5 3.9,5.3 -0.1,0.2 4.7,-0.5 14.4,3.9 3.3,-1.8 8.4,-0.3 4.5,-4.2 7.3,0.2 13.4,-5.3 10,-8.1 0,0 -4.4,-3 -4.7,-13.6 -4,-8.7 1,-6.6 -0.6,-4.2 3.5,-8.4 -0.3,-3.6 -7.7,-5 -0.6,-7.8 5.9,-17.1 -17.3,-13.8 -0.7,-8 -44.1,-28.2 0,0 -6,6.1 -4.1,6.3 4.8,4.7 -7,3.4 -1.5,-1.6 -7.1,0.9 -5.5,3.1 -3.3,-5.4 2.3,-9.7 0.5,-8.3 0,0 0,0 -13.4,-0.2 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="UG" data-name="Uganda" d="m 711.3,458.5 -7.4,6.4 -8.6,-0.1 -9.8,3.3 -7.8,-3.1 -5,3.8 0,0 -0.6,16.1 4.9,1.9 -3.9,4.9 -4.7,3.7 -4.6,7.2 -2.6,6.4 -0.6,11.1 -2.9,5.3 -0.1,10.5 2.9,1.4 7.4,-4.3 4.3,-1.7 13.4,0.2 0,0 -0.7,-5.3 5.7,-8.1 7.7,-2 5.2,-3.3 6.3,2.7 0.6,1 0,-0.7 3.5,-5.6 5.9,-9.2 4.4,-10.1 -5.5,-15.8 -1.5,-7 -5.9,-9.6 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="ZA" data-name="South Africa" d="m 522.3,999 5.3,-0.3 7.5,-5.3 10,-2.2 12.3,-5.5 4.7,0.7 7.2,-1.7 12.3,2.7 5.9,-2.6 6.9,2 1.8,-3.8 6,-0.8 12.6,-5.3 9.3,-6.3 8.9,-8.3 14.4,-14.2 7.5,-9.9 3.9,-7.1 5.5,-7 2.5,-2 8.6,-7 3.5,-6.2 2.3,-11.5 3.7,-10.1 -9,-0.1 -2.8,6.1 -7,1.5 -6.6,-7.5 0.2,-4.8 3.6,-5.2 1.4,-4 3.5,-1 5.8,2.6 -0.7,-5 3,-15.4 -2.5,-9.9 -4.7,-19.5 -6.3,-1.3 -4.1,1.6 -5.7,-2.3 -4.9,-0.2 -17.3,10.2 -11.2,10.3 -4.4,9.3 -3.9,5.2 -6.5,1.1 -2.4,6.6 -1.4,4.3 -7.8,3.2 -9.6,-0.6 -5.5,-3.9 -4.9,-1.7 -6,3.2 -3.2,6.6 -5.8,4.2 -6.2,6.2 -8.5,1.4 -2.5,-4.9 1.5,-8.4 -6.5,-13.2 -3.2,-2 -2.2,51.1 -10.8,7.1 -6.4,1 -7.3,-2.6 -5.2,-1 -1.7,-6 -4.5,-3.7 -6,6.8 7.7,17.9 0,0.1 5.4,11.7 6.9,12.8 -0.2,10.6 -3.9,2.5 3.2,9.3 -0.5,8.1 1.3,3.8 0.7,-1.9 4.6,6.2 3.8,0.2 4.6,5 z m 103,-59.1 -4.3,1.3 -8,-10.6 6.9,-8.7 6.8,-5.4 5.7,-2.8 4.8,4.2 3.8,4.2 -4.1,6.7 -2.4,4.5 -6.7,2.2 -2.5,4.4 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="ZM" data-name="Zambia" d="m 671.3,636 -4.1,-1.1 0.7,-3 -2.1,-0.6 -16.4,2.3 -3.3,1.7 -3.6,8.8 2.6,6.1 -2.5,16.4 -1.9,13.9 3.2,2.4 8.4,5.4 3.4,-2.5 0.6,14.9 -9.3,-0.1 -4.8,-7.6 -4.3,-5.9 -9.2,-1.9 -2.6,-7.3 -7.5,4.4 -9.7,-2 -3.9,-6.2 -7.7,-1.3 -5.7,0.3 -0.6,-4.3 -4.2,-0.3 1.2,4.3 -1.5,6.7 2,6.5 -2,5.2 1,4.7 -25.3,-0.1 -1.6,44 7.8,11.3 7.6,8.6 9.9,-3.1 7.8,0.8 4.7,3.1 0,1.2 2.2,1 13.4,1.5 3.8,1.6 4.1,-0.3 7,-9 10.9,-11.4 4.4,-1 1.7,-4.8 7,-5.5 9.3,-1.9 -0.8,-9.9 37.1,-11.4 -6.2,-3.6 4.1,-12.8 4,-4.8 -2,-11.5 2.7,-11.2 2.2,-3.8 -2.8,-11.7 -5.6,-6.2 -6.8,-4.1 -7.7,-2.4 -4.8,-2.3 -0.6,-0.4 0,0 0.9,2.3 -2,0.8 -2.6,-2.9 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="ZW" data-name="Zimbabwe" d="m 669.1,825.1 13.4,-15.7 3.6,-9.9 1.9,-1.3 1.7,-8.1 -1.7,-4.1 1,-10.4 2.8,-9.6 0.8,-17.5 -6.1,-4.4 -5.7,-1 -2.5,-3.4 -5.5,-3 -10,0.3 -0.6,-5.1 -9.3,1.9 -7,5.5 -1.7,4.8 -4.4,1 -10.9,11.4 -7,9 -4.1,0.3 -3.8,-1.6 -13.4,-1.5 4.2,11.1 2.3,2.4 3.5,8 13,15.2 5.1,1.5 -0.2,4.9 3.1,8.8 9.2,2.1 7.3,6.2 4.9,0.2 5.7,2.3 4.1,-1.6 6.3,1.3 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <path id="SO" data-name="Somalia" d="m 832.6,372.8 -5.7,-5.8 -2.5,-5.7 -4.1,-2.6 -4.2,7.4 -2.5,4.9 4.8,7.7 4.6,6.6 4.8,5 40.3,16.4 10.3,-0.1 -33.5,41.5 -15.9,0.6 -10.7,9.8 -7.8,0.2 -3.3,4.4 -10.5,15.7 0.4,50.4 7.2,11.4 2.7,-3.3 2.9,-7.3 13.4,-16.7 11.4,-10.6 18.1,-13.7 12.1,-11.2 14.1,-18.9 10.1,-15.5 10,-20.2 7,-17.7 5.4,-15.5 2.9,-14.9 2.4,-5 -0.4,-7.3 0.8,-8 -0.5,-3.9 -4.6,0.1 -5.5,4.7 -6.4,1.4 -5.5,2.1 -3.9,0.2 0,0 -6.9,0.5 -4.2,2.6 -6,0.9 -10.5,4.3 -13.2,1.6 -11.3,3.5 -6.1,0 z" fill="#1a2840" stroke="#2a3f5f" stroke-width="0.5"/>
+          <!-- Tooltip -->
+          <rect id="mapTooltipBg" x="0" y="0" width="200" height="50" rx="3" fill="#152740" stroke="#4A6070" stroke-width="1" opacity="0" pointer-events="none"/>
+          <text id="mapTooltipName" x="0" y="0" fill="#fff" font-family="DM Sans,sans-serif" font-size="14" font-weight="600" opacity="0" pointer-events="none"></text>
+          <text id="mapTooltipCommodity" x="0" y="0" fill="#ccc" font-family="DM Sans,sans-serif" font-size="11" letter-spacing="1" opacity="0" pointer-events="none"></text>
+        </svg>
+      </div>
+      <!-- Legend -->
+      <div style="min-width:200px;padding-top:20px">
+        <div class="dm" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-bottom:16px">Legend</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:16px;height:16px;border-radius:2px;background:#C4A55A"></div><span class="dm" style="font-size:12px;color:#ccc">Gold</span></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:16px;height:16px;border-radius:2px;background:#D4836A"></div><span class="dm" style="font-size:12px;color:#ccc">Gold + Critical Metals</span></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:16px;height:16px;border-radius:2px;background:#7BA89D"></div><span class="dm" style="font-size:12px;color:#ccc">Polymetallic / REE</span></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px"><div style="width:16px;height:16px;border-radius:2px;background:#1a2840;border:1px solid #2a3f5f"></div><span class="dm" style="font-size:12px;color:#ccc">Other Countries</span></div>
+        <div class="dm" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-bottom:12px">Commodities by Country</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="dm" style="font-size:12px;color:#fff">&#9670; Côte d'Ivoire <span style="color:#D4836A;font-size:10px">Au · Critical Metals</span></div>
+          <div class="dm" style="font-size:12px;color:#fff">&#9670; Mali <span style="color:#C4A55A;font-size:10px">Au</span></div>
+          <div class="dm" style="font-size:12px;color:#fff">&#9670; Guinea <span style="color:#D4836A;font-size:10px">Au · Critical Metals</span></div>
+          <div class="dm" style="font-size:12px;color:#fff">&#9670; Liberia <span style="color:#C4A55A;font-size:10px">Au</span></div>
+          <div class="dm" style="font-size:12px;color:#fff">&#9670; Cameroon <span style="color:#C4A55A;font-size:10px">Au</span></div>
+          <div class="dm" style="font-size:12px;color:#fff">&#9670; Namibia <span style="color:#7BA89D;font-size:10px">Au · Cu-Pb-Zn · REE</span></div>
+          <div class="dm" style="font-size:12px;color:#fff">&#9670; Botswana <span style="color:#7BA89D;font-size:10px">Au · Cu</span></div>
+        </div>
+        <div style="margin-top:24px;padding-top:16px;border-top:1px solid #1A3150">
+          <div class="dm" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#7A7A7A;margin-bottom:8px">Also Active In</div>
+          <div class="dm" style="font-size:12px;color:#94A8BA">Laos (Southeast Asia)</div>
+          <div class="dm" style="font-size:12px;color:#94A8BA;margin-top:4px">Singapore (HQ) · Dubai · Hong Kong</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <!-- West Africa -->
+    <div class="fu1" style="margin-bottom:28px"><div style="display:flex;align-items:center;gap:14px;margin-bottom:16px"><div style="width:32px;height:32px;border-radius:50%;border:1.5px solid #B8964E;display:flex;align-items:center;justify-content:center"><div style="width:7px;height:7px;border-radius:50%;background:#B8964E"></div></div><div><h2 style="font-size:24px;font-weight:400;color:#0F1E2E;margin:0">West Africa</h2><p class="dm" style="font-size:12px;color:#7A7A7A;margin:0">Gold-focused exploration and operating interests across the West African Craton</p></div></div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-left:46px">
+      <div class="cc cc-strategic" style="border-top:2px solid #E2DED5"><span class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E">C&ocirc;te d&rsquo;Ivoire</span><div class="dm" style="font-size:11px;color:#7A7A7A;margin-top:6px">Gold &middot; Critical Metals</div></div>
+      <div class="cc cc-gold" style="border-top:2px solid #E2DED5"><span class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E">Mali</span><div class="dm" style="font-size:11px;color:#7A7A7A;margin-top:6px">Gold</div></div>
+      <div class="cc cc-strategic" style="border-top:2px solid #E2DED5"><span class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E">Guinea</span><div class="dm" style="font-size:11px;color:#7A7A7A;margin-top:6px">Gold &middot; Critical Metals</div></div>
+      <div class="cc cc-gold" style="border-top:2px solid #E2DED5"><span class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E">Liberia</span><div class="dm" style="font-size:11px;color:#7A7A7A;margin-top:6px">Gold</div></div>
+      <div class="cc cc-gold" style="border-top:2px solid #E2DED5"><span class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E">Cameroon</span><div class="dm" style="font-size:11px;color:#7A7A7A;margin-top:6px">Gold</div></div>
+    </div><div style="margin:28px 0 0 46px;border-bottom:1px solid #E2DED5"></div></div>
+    <!-- Southern Africa -->
+    <div class="fu2" style="margin-bottom:28px"><div style="display:flex;align-items:center;gap:14px;margin-bottom:16px"><div style="width:32px;height:32px;border-radius:50%;border:1.5px solid #6BA3BE;display:flex;align-items:center;justify-content:center"><div style="width:7px;height:7px;border-radius:50%;background:#6BA3BE"></div></div><div><h2 style="font-size:24px;font-weight:400;color:#0F1E2E;margin:0">Southern Africa</h2><p class="dm" style="font-size:12px;color:#7A7A7A;margin:0">Critical metals and polymetallic exploration in proven geological provinces</p></div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-left:46px;max-width:500px">
+      <div class="cc cc-poly" style="border-top:2px solid #E2DED5"><span class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E">Namibia</span><div class="dm" style="font-size:11px;color:#7A7A7A;margin-top:6px">Gold &middot; Cu-Pb-Zn &middot; REE</div></div>
+      <div class="cc cc-poly" style="border-top:2px solid #E2DED5"><span class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E">Botswana</span><div class="dm" style="font-size:11px;color:#7A7A7A;margin-top:6px">Gold &middot; Cu</div></div>
+    </div><div style="margin:28px 0 0 46px;border-bottom:1px solid #E2DED5"></div></div>
+    <!-- Southeast Asia -->
+    <div class="fu3" style="margin-bottom:28px"><div style="display:flex;align-items:center;gap:14px;margin-bottom:16px"><div style="width:32px;height:32px;border-radius:50%;border:1.5px solid #8B9E78;display:flex;align-items:center;justify-content:center"><div style="width:7px;height:7px;border-radius:50%;background:#8B9E78"></div></div><div><h2 style="font-size:24px;font-weight:400;color:#0F1E2E;margin:0">Southeast Asia</h2><p class="dm" style="font-size:12px;color:#7A7A7A;margin:0">Legacy assets under strategic review</p></div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-left:46px;max-width:500px">
+      <div class="cc" style="border-top:2px solid #E2DED5"><span class="dm" style="font-size:14px;font-weight:600;color:#0F1E2E">Laos</span><div class="dm" style="font-size:11px;color:#7A7A7A;margin-top:6px">Multiple</div></div>
+    </div></div>
+    <!-- Offices -->
+    <div class="fu4" style="margin-top:48px"><div class="sl" style="margin-bottom:16px">Corporate Offices</div><div class="g3" style="gap:14px">
+      <div style="display:flex;align-items:center;gap:12px;padding:18px 20px;background:#fff;border:1px solid #E2DED5;border-radius:2px"><div style="width:24px;height:24px;border-radius:2px;background:#0F1E2E;display:flex;align-items:center;justify-content:center;color:#B8964E;font-size:9px" class="dm">&diams;</div><div><div class="dm" style="font-size:13px;font-weight:600;color:#0F1E2E">Singapore</div><div class="dm" style="font-size:11px;color:#7A7A7A">Global Headquarters</div></div></div>
+      <div style="display:flex;align-items:center;gap:12px;padding:18px 20px;background:#fff;border:1px solid #E2DED5;border-radius:2px"><div style="width:24px;height:24px;border-radius:2px;background:#0F1E2E;display:flex;align-items:center;justify-content:center;color:#B8964E;font-size:9px" class="dm">&diams;</div><div><div class="dm" style="font-size:13px;font-weight:600;color:#0F1E2E">Dubai, UAE</div><div class="dm" style="font-size:11px;color:#7A7A7A">Trading Operations</div></div></div>
+      <div style="display:flex;align-items:center;gap:12px;padding:18px 20px;background:#fff;border:1px solid #E2DED5;border-radius:2px"><div style="width:24px;height:24px;border-radius:2px;background:#0F1E2E;display:flex;align-items:center;justify-content:center;color:#B8964E;font-size:9px" class="dm">&diams;</div><div><div class="dm" style="font-size:13px;font-weight:600;color:#0F1E2E">Hong Kong</div><div class="dm" style="font-size:11px;color:#7A7A7A">R&amp;D Centre</div></div></div>
+    </div></div>
+    <div class="callout" style="margin-top:32px"><p style="margin:0">PMH holds operating assets and exploration interests across these jurisdictions. We work with established local partners in each market and maintain a compliance-first approach to all new market entries.</p></div>
+  </section>
+</div>
+
+<!-- ==================== TEAM ==================== -->
+<div id="team" class="page">
+  <div class="light-hero">
+    <div class="sl fu" style="margin-bottom:10px">The Team</div>
+    <h1 class="fu1">World-Class Expertise. Built for the Field.</h1>
+    <div class="fu2" style="width:52px;height:2px;background:#B8964E;margin:14px 0"></div>
+    <p class="fu3 bt" style="max-width:580px">Decades of hands-on experience across Africa, South America, Central Asia, and Southeast Asia.</p>
+  </div>
+  <section class="sec">
+    <div class="fu"><div class="sl" style="margin-bottom:16px">Board of Directors</div><div class="g3" style="gap:18px;margin-bottom:48px">
+      <div class="ch card" style="padding:28px"><div style="font-size:32px;font-weight:300;color:#B8964E;margin-bottom:2px">Z.Z.</div><div class="dm" style="font-size:12px;font-weight:700;color:#0F1E2E;margin-bottom:14px">Executive Director, Board Chair</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Former space tech entrepreneur, 7 satellite missions, 3 ISS payloads</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Forbes Asia 30 Under 30</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Harvard Kennedy School Senior Fellow</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Columbia University and MIT alumni</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7"><span style="color:#B8964E">&middot;</span> Applies remote sensing, ML, and ore modelling to mining ventures across Africa and Southeast Asia</div></div>
+      <div class="ch card" style="padding:28px"><div style="font-size:32px;font-weight:300;color:#B8964E;margin-bottom:2px">J.K.</div><div class="dm" style="font-size:12px;font-weight:700;color:#0F1E2E;margin-bottom:14px">Director, Mining Operations</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Over 20 years in mining project management and resource development across multiple jurisdictions</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Extensive track record in mine planning, operational oversight, and cross-border asset management</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Background spanning corporate strategy and on-the-ground execution in frontier markets</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7"><span style="color:#B8964E">&middot;</span> Deep network across Africa, the Middle East, and the Asia-Pacific region</div></div>
+      <div class="ch card" style="padding:28px"><div style="font-size:32px;font-weight:300;color:#B8964E;margin-bottom:2px">S.W.</div><div class="dm" style="font-size:12px;font-weight:700;color:#0F1E2E;margin-bottom:14px">Director, Investment</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Founding Partner of a Canadian VC</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> 10+ years early-stage investment</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Multiple successful exits and listings on the Toronto exchanges</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Master&rsquo;s in Management, Harvard University</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7"><span style="color:#B8964E">&middot;</span> Strategic advisor in frontier and emerging markets, focused on innovation and long-term impact</div></div>
+    </div></div>
+    <div class="fu3"><div class="sl" style="margin-bottom:16px">Technical Team</div><div class="g3" style="gap:18px;margin-bottom:40px">
+      <div class="ch card" style="padding:28px"><div style="font-size:32px;font-weight:300;color:#B8964E;margin-bottom:2px">Dr. Q</div><div class="dm" style="font-size:12px;font-weight:700;color:#0F1E2E;margin-bottom:14px">Chief Scientist, Tectonics &amp; Deep Mineral System Modelling</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> A leading expert in tectonic evolution and deep mineral system modelling, advising doctoral-level research in a national research institute</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Develops predictive frameworks for crust-mantle interaction, plate-boundary dynamics, and metallogenic belt targeting</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7"><span style="color:#B8964E">&middot;</span> Applies geophysical imaging and regional structural modelling to prioritize high-value exploration domains and systematically guide strategic land and tenement evaluation</div></div>
+      <div class="ch card" style="padding:28px"><div style="font-size:32px;font-weight:300;color:#B8964E;margin-bottom:2px">Dr. Z</div><div class="dm" style="font-size:12px;font-weight:700;color:#0F1E2E;margin-bottom:14px">Chief Engineer, GeoChem &amp; Mineral Deposit Modelling</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Over 30 years of applied geochemistry and exploration systems design experience</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Designs geochemical vectoring frameworks, manages QA/QC protocols for drill sampling, and integrates trace element, isotopic, and alteration data into deposit-targeting models</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7"><span style="color:#B8964E">&middot;</span> Has architected multi-regional geochemical strategies that support major discovery decisions and resource evaluation workflows, bridging scientific rigor and commercial exploration needs</div></div>
+      <div class="ch card" style="padding:28px"><div style="font-size:32px;font-weight:300;color:#B8964E;margin-bottom:2px">Dr. Y</div><div class="dm" style="font-size:12px;font-weight:700;color:#0F1E2E;margin-bottom:14px">Chief Geologist, Structure Geology &amp; Regional Exploration</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> An experienced exploration geologist with over 30 years of field work, including serving as Chief Geologist at a top ten global mining company</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Oversees structural mapping, belt-deposit-scale fault-system interpretation, and regional targeting</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7;margin-bottom:5px"><span style="color:#B8964E">&middot;</span> Leads drill-target planning, cross section construction, and 3D geological-structural modelling in frontier terrains</div><div class="dm" style="font-size:12px;color:#555;line-height:1.7"><span style="color:#B8964E">&middot;</span> His leadership accelerates the identification of high-potential mineral assets and drives early-stage exploration forward</div></div>
+    </div></div>
+    <div class="fu4 callout"><h3 style="font-size:17px">Operations &amp; Regional Teams</h3><p>Our Singapore headquarters houses dedicated teams across business development, legal and compliance, finance, and administration. In the field, regional operations are led by experienced country heads with years of on-ground presence in West and Southern Africa. They work alongside trusted local partners to manage community relationships, regulatory processes, and day-to-day operations, because in this industry, there is no substitute for being present.</p></div>
+  </section>
+</div>
+
+<!-- ==================== CONTACT ==================== -->
+<div id="contact" class="page">
+  <div class="light-hero">
+    <div class="sl fu" style="margin-bottom:10px">Contact</div>
+    <h1 class="fu1">Let&rsquo;s Talk</h1>
+    <div class="fu2" style="width:52px;height:2px;background:#B8964E;margin:14px 0"></div>
+    <p class="fu3 bt" style="max-width:580px">We review every enquiry carefully and aim to connect with the right people promptly.</p>
+  </div>
+  <section style="padding:56px 80px;max-width:900px;margin:0 auto">
+    <div class="g2" style="gap:40px;margin-bottom:48px">
+      <div class="fu">
+        <div class="sl" style="margin-bottom:14px">Headquarters</div>
+        <div class="dm" style="font-size:14px;color:#2A2A2A;line-height:2"><strong>Paramount Matter Holdings Pte. Ltd.</strong><br>109 North Bridge Road<br>Singapore 179097</div>
+        <div style="margin-top:20px" class="dm" style="font-size:13px"><div style="margin-bottom:6px"><span style="color:#7A7A7A">General: </span><a href="/cdn-cgi/l/email-protection#fc95929a93bc8c9d8e9d9193899288919d8888998ed29f9391" style="color:#B8964E;font-weight:600;text-decoration:none"><span class="__cf_email__" data-cfemail="c7aea9a1a887b7a6b5a6aaa8b2a9b3aaa6b3b3a2b5e9a4a8aa">[email&#160;protected]</span></a></div></div>
+        <div class="sl" style="margin-top:28px;margin-bottom:14px">We Are Seeking</div>
+        <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #E2DED5"><div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:3px">Strategic Partners</div><div class="bt" style="font-size:12.5px">License holders and junior miners seeking capital, technical expertise, and operational support</div></div>
+        <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #E2DED5"><div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:3px">Investment Partners</div><div class="bt" style="font-size:12.5px">Privately capitalised investors aligned with long-term, science-driven resource development</div></div>
+        <div><div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:3px">Technical Collaborators</div><div class="bt" style="font-size:12.5px">Geological service providers, drilling contractors, and technology companies in our target regions</div></div>
+      </div>
+      <div class="fu2">
+        <div class="sl" style="margin-bottom:14px">Send Us a Message</div>
+        <form class="contact-form" action="https://formspree.io/f/xjgeebvz" method="POST" style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
+            <div><label>Email</label><input type="email" name="email" required placeholder="your@email.com"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div><label>Company / Organisation</label><input type="text" name="company" placeholder="Optional"></div>
+            <div><label>I am a...</label><select name="enquiry_type" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="License Holder">License Holder</option>
+              <option value="Junior Explorer">Junior Explorer</option>
+              <option value="Investor">Investor / Fund</option>
+              <option value="Technical Provider">Technical / Service Provider</option>
+              <option value="Government">Government / Regulatory</option>
+              <option value="Other">Other</option>
+            </select></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div><label>Country of Interest</label><select name="country">
+              <option value="" disabled selected>Select if applicable</option>
+              <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+              <option value="Mali">Mali</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Namibia">Namibia</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Other Africa">Other (Africa)</option>
+              <option value="Other">Other (Non-Africa)</option>
+            </select></div>
+            <div><label>Commodity</label><select name="commodity">
+              <option value="" disabled selected>Select if applicable</option>
+              <option value="Gold">Gold</option>
+              <option value="Copper">Copper</option>
+              <option value="REE">Rare Earths (REE)</option>
+              <option value="Base Metals">Base Metals (Cu-Pb-Zn)</option>
+              <option value="Critical Metals">Critical Metals</option>
+              <option value="Multiple">Multiple</option>
+              <option value="Other">Other</option>
+            </select></div>
+          </div>
+          <div><label>Message</label><textarea name="message" required placeholder="Tell us about your project or enquiry..."></textarea></div>
+          <button type="submit" class="btn-gold" style="align-self:flex-start;margin-top:4px">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="fu3 callout"><h3>Have a Project You&rsquo;d Like Us to Evaluate?</h3><p>Whether you hold a license in one of our target regions, represent a junior explorer looking for a partner, or have a project that could benefit from our technical and financial resources, we want to hear from you. Send us an overview and our team will be in touch.</p></div>
+    <div class="fu4 card" style="margin-top:24px"><div class="dm" style="font-size:15px;font-weight:600;color:#0F1E2E;margin-bottom:6px">Careers at PMH</div><p class="bt" style="font-size:13px">We&rsquo;re growing and looking for people who want to do real work in real places. We&rsquo;re especially interested in geologists with African field experience, regional operations managers, and finance/compliance professionals with multi-jurisdiction backgrounds. Reach out to <a href="/cdn-cgi/l/email-protection#c6afa8a0a986b6a7b4a7aba9b3a8b2aba7b2b2a3b4e8a5a9ab" style="color:#B8964E;font-weight:600;text-decoration:none"><span class="__cf_email__" data-cfemail="d6bfb8b0b996a6b7a4b7bbb9a3b8a2bbb7a2a2b3a4f8b5b9bb">[email&#160;protected]</span></a>.</p></div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="assets/img/logo.png" alt="PMH" style="height:18px">
+      <div><div class="dm" style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B8964E">Paramount Matter Holdings</div><div class="dm" style="font-size:12px;color:#7A8FA0;margin-top:2px">109 North Bridge Road, Singapore 179097</div></div>
+    </div>
+    <div style="display:flex;gap:40px">
+      <a onclick="showPage('about')">About</a><a onclick="showPage('approach')">Approach</a><a onclick="showPage('projects')">Projects</a><a onclick="showPage('team')">Team</a><a onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="dm" style="font-size:12px;color:#B8964E"><a href="/cdn-cgi/l/email-protection#91f8fff7fed1e1f0e3f0fcfee4ffe5fcf0e5e5f4e3bff2fefc" style="color:#B8964E;text-decoration:none"><span class="__cf_email__" data-cfemail="167f78707956667764777b796378627b77626273643875797b">[email&#160;protected]</span></a></div>
+  </div>
+  <div style="margin-top:32px;padding-top:16px;border-top:1px solid #1A3150;display:flex;justify-content:space-between">
+    <span class="dm" style="font-size:10px;color:#4A5A6A">&copy; 2026 Paramount Matter Holdings Pte. Ltd.</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+function closeNav() {
+  document.getElementById('navLinks').classList.remove('open');
+}
+function showPage(id) {
+  var pages = document.querySelectorAll('.page');
+  for (var i = 0; i < pages.length; i++) { pages[i].classList.remove('active'); }
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0, 0);
+  closeNav();
+  var links = document.querySelectorAll('nav .links a');
+  for (var j = 0; j < links.length; j++) {
+    links[j].classList.remove('active');
+    if (links[j].getAttribute('onclick') && links[j].getAttribute('onclick').indexOf("'" + id + "'") !== -1) {
+      links[j].classList.add('active');
+    }
+  }
+}
+/* Animated counters */
+function animateCounters() {
+  var counters = document.querySelectorAll('[data-count]');
+  counters.forEach(function(el) {
+    var target = parseInt(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    var prefix = el.getAttribute('data-prefix') || '';
+    var duration = 1600;
+    var start = 0;
+    var startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      var current = Math.floor(ease * target);
+      el.textContent = prefix + current.toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(step);
+          observer.unobserve(el);
+        }
+      });
+    }, {threshold: 0.3});
+    observer.observe(el);
+  });
+}
+document.addEventListener('DOMContentLoaded', function() {
+  animateCounters();
+  /* Highlight PMH countries */
+  var pmhActive = {
+    'ML': '#C4A55A', 'LR': '#C4A55A', 'CM': '#C4A55A',
+    'CI': '#D4836A', 'GN': '#D4836A',
+    'NA': '#7BA89D', 'BW': '#7BA89D'
+  };
+  var pmhData = {
+    'CI': {name:"Côte d'Ivoire", commodity:'Au · Critical Metals'},
+    'ML': {name:'Mali', commodity:'Au'},
+    'GN': {name:'Guinea', commodity:'Au · Critical Metals'},
+    'LR': {name:'Liberia', commodity:'Au'},
+    'CM': {name:'Cameroon', commodity:'Au'},
+    'NA': {name:'Namibia', commodity:'Au · Cu-Pb-Zn · REE'},
+    'BW': {name:'Botswana', commodity:'Au · Cu'}
+  };
+  Object.keys(pmhActive).forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) { el.style.fill = pmhActive[id]; el.style.cursor = 'pointer'; el.style.transition = 'fill .3s, opacity .3s'; }
+  });
+  /* Tooltip on hover */
+  var ttBg = document.getElementById('mapTooltipBg');
+  var ttName = document.getElementById('mapTooltipName');
+  var ttComm = document.getElementById('mapTooltipCommodity');
+  document.querySelectorAll('#africaMap path').forEach(function(p) {
+    p.addEventListener('mouseenter', function(e) {
+      var id = p.id || p.getAttribute('data-id');
+      if (pmhData[id]) {
+        var d = pmhData[id];
+        var bbox = p.getBBox();
+        var tx = Math.min(bbox.x + bbox.width/2, 780);
+        var ty = bbox.y - 60;
+        if (ty < 10) ty = bbox.y + bbox.height + 10;
+        ttBg.setAttribute('x', tx - 10); ttBg.setAttribute('y', ty); ttBg.setAttribute('opacity','1');
+        ttName.setAttribute('x', tx); ttName.setAttribute('y', ty + 22); ttName.textContent = d.name; ttName.setAttribute('opacity','1');
+        ttComm.setAttribute('x', tx); ttComm.setAttribute('y', ty + 40); ttComm.textContent = d.commodity; ttComm.setAttribute('opacity','1');
+        p.style.opacity = '0.8';
+      }
+    });
+    p.addEventListener('mouseleave', function() {
+      ttBg.setAttribute('opacity','0'); ttName.setAttribute('opacity','0'); ttComm.setAttribute('opacity','0');
+ 
