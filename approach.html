@@ -9,12 +9,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/tech-demo.css">
 </head>
 <body>
 
 <nav>
   <a class="logo" href="index.html">
-    <img src="assets/img/logo.svg" alt="PMH">
+    <img src="assets/img/logo.png" alt="PMH">
     <span>Paramount Matter</span>
   </a>
   <div class="links" id="navLinks">
@@ -65,8 +66,347 @@
     <div class="ch card"><h4 class="dm" style="font-size:14px;font-weight:700;color:#0F1E2E;margin-bottom:6px">Hyperspectral Analysis</h4><p class="bt" style="font-size:13px">Automated lithology and mineral identification using SWIR/TIR spectral data</p></div>
     <div class="ch card"><h4 class="dm" style="font-size:14px;font-weight:700;color:#0F1E2E;margin-bottom:6px">Integrated Platforms</h4><p class="bt" style="font-size:13px">Centralised databases enabling real-time collaboration across Singapore, Hong Kong, and field teams</p></div>
   </div></div>
+</section>
 
-  <div class="fu5" style="margin-top:48px"><div class="sl" style="margin-bottom:10px">How We Partner</div><h2 style="font-size:30px;font-weight:400;color:#0F1E2E;margin-bottom:20px">Building Local Partnerships. Investing in Early-Stage Assets.</h2>
+<!-- ============================================================
+     HOW IT WORKS — FROM SATELLITE TO TARGET
+     ============================================================ -->
+<section class="tech-section">
+  <div class="section-label">Technology in Action</div>
+  <h2>How It Works &mdash; From Satellite to Target</h2>
+  <p class="section-sub">An inside look at how PMH integrates multi-source satellite remote sensing, geochemical analysis, and structural interpretation to systematically identify and delineate drill-ready exploration targets.</p>
+
+  <!-- MODULE 1: Remote Sensing Workflow -->
+  <div class="tech-module" id="workflowModule">
+    <div class="tech-module-title">Module 1</div>
+    <h3>Remote Sensing Exploration Model</h3>
+    <p class="module-desc">Interactive flowchart showing how multi-source satellite data is processed through advanced analytical methods to generate validated exploration targets.</p>
+
+    <div class="workflow-container">
+      <svg class="workflow-svg"></svg>
+      <div class="workflow-columns">
+        <!-- Column 1: Data Sources -->
+        <div>
+          <div class="workflow-col-head">Data Sources</div>
+          <div class="workflow-node" data-node="multispectral">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#127760;</div>
+            <div class="node-name">Multi-Spectral</div>
+            <div class="node-detail">Landsat-8 &middot; Sentinel-2</div>
+          </div>
+          <div class="workflow-node" data-node="hyperspectral">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#128300;</div>
+            <div class="node-name">Hyperspectral</div>
+            <div class="node-detail">ASTER &middot; WorldView-2</div>
+          </div>
+          <div class="workflow-node" data-node="sar">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#128225;</div>
+            <div class="node-name">SAR Radar</div>
+            <div class="node-detail">Sentinel-1 &middot; InSAR</div>
+          </div>
+          <div class="workflow-node" data-node="dem">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#9968;</div>
+            <div class="node-name">Elevation Data</div>
+            <div class="node-detail">SRTM &middot; LiDAR DEM</div>
+          </div>
+        </div>
+
+        <!-- Column 2: Processing Methods -->
+        <div>
+          <div class="workflow-col-head">Processing</div>
+          <div class="workflow-node" data-node="pca">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#128202;</div>
+            <div class="node-name">PCA Analysis</div>
+            <div class="node-detail">Directed principal components</div>
+          </div>
+          <div class="workflow-node" data-node="bandratio">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#128200;</div>
+            <div class="node-name">Band Ratios</div>
+            <div class="node-detail">Index mapping &amp; enhancement</div>
+          </div>
+          <div class="workflow-node" data-node="ml">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#129302;</div>
+            <div class="node-name">ML Classification</div>
+            <div class="node-detail">Random Forest &amp; ensemble</div>
+          </div>
+          <div class="workflow-node" data-node="structural">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#128204;</div>
+            <div class="node-name">Lineament Extraction</div>
+            <div class="node-detail">Edge detection &amp; filtering</div>
+          </div>
+        </div>
+
+        <!-- Column 3: Output Information -->
+        <div>
+          <div class="workflow-col-head">Outputs</div>
+          <div class="workflow-node" data-node="alteration">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#127755;</div>
+            <div class="node-name">Alteration Maps</div>
+            <div class="node-detail">Iron oxide &middot; argillic &middot; phyllic</div>
+          </div>
+          <div class="workflow-node" data-node="anomaly">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#128161;</div>
+            <div class="node-name">Anomaly Correlation</div>
+            <div class="node-detail">Spectral + geochemical validation</div>
+          </div>
+          <div class="workflow-node" data-node="prospectivity">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#127919;</div>
+            <div class="node-name">Prospectivity Model</div>
+            <div class="node-detail">Weighted spatial integration</div>
+          </div>
+        </div>
+
+        <!-- Column 4: Target Delineation -->
+        <div>
+          <div class="workflow-col-head">Target</div>
+          <div class="workflow-node" data-node="drillready">
+            <div class="node-pulse"></div>
+            <div class="node-icon">&#9873;</div>
+            <div class="node-name">Drill-Ready Targets</div>
+            <div class="node-detail">Field-validated, ranked priority zones for drilling</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="workflow-info">
+      <div class="info-title"></div>
+      <div class="info-text"></div>
+    </div>
+  </div>
+
+  <!-- MODULE 2: Interactive GIS Layer Demo -->
+  <div class="tech-module" id="gisModule">
+    <div class="tech-module-title">Module 2</div>
+    <h3>Interactive GIS Layer Demonstration</h3>
+    <p class="module-desc">Toggle geological data layers to see how multi-source analysis builds a composite exploration model. Each layer adds a dimension of geological intelligence.</p>
+
+    <div class="gis-container">
+      <div class="gis-canvas-wrap">
+        <canvas></canvas>
+        <div class="gis-cursor-info">Hover to see coordinates</div>
+        <div class="gis-scale">
+          <div class="gis-scale-bar"></div>
+          <span>5 km</span>
+        </div>
+      </div>
+      <div class="gis-panel">
+        <div class="gis-panel-title">Data Layers</div>
+        <div class="gis-layer" data-layer="satellite">
+          <div class="gis-layer-toggle"></div>
+          <div class="gis-layer-swatch" style="background:#2a3a2a"></div>
+          <div class="gis-layer-name">Satellite Base</div>
+        </div>
+        <div class="gis-layer" data-layer="hostrock">
+          <div class="gis-layer-toggle"></div>
+          <div class="gis-layer-swatch" style="background:#5a6e8a"></div>
+          <div class="gis-layer-name">Host Rock Geology</div>
+        </div>
+        <div class="gis-layer" data-layer="ironoxide">
+          <div class="gis-layer-toggle"></div>
+          <div class="gis-layer-swatch" style="background:#c44"></div>
+          <div class="gis-layer-name">Iron Oxide Alteration</div>
+        </div>
+        <div class="gis-layer" data-layer="carbonate">
+          <div class="gis-layer-toggle"></div>
+          <div class="gis-layer-swatch" style="background:#4a9"></div>
+          <div class="gis-layer-name">Carbonate Anomaly</div>
+        </div>
+        <div class="gis-layer" data-layer="structural">
+          <div class="gis-layer-toggle"></div>
+          <div class="gis-layer-swatch" style="background:#e0c060"></div>
+          <div class="gis-layer-name">Structural Lines</div>
+        </div>
+        <div class="gis-layer" data-layer="targets">
+          <div class="gis-layer-toggle"></div>
+          <div class="gis-layer-swatch" style="background:#ff6"></div>
+          <div class="gis-layer-name">Exploration Targets</div>
+        </div>
+        <button class="gis-auto-btn">&#9654;  Auto Demo</button>
+        <div class="gis-legend"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 3: Satellite Data Sources -->
+  <div class="tech-module" id="satModule">
+    <div class="tech-module-title">Module 3</div>
+    <h3>Satellite Data Sources</h3>
+    <p class="module-desc">The multi-source satellite platforms powering our remote sensing analysis. Click any card to explore technical specifications and exploration applications.</p>
+
+    <div class="sat-grid">
+      <!-- Landsat-8 -->
+      <div class="sat-card" style="--sat-accent:#4a90d9">
+        <div class="sat-name">Landsat-8</div>
+        <div class="sat-operator">NASA / USGS</div>
+        <div class="sat-summary">Workhorse multi-spectral platform with 11 bands spanning VIS to TIR. Foundation dataset for regional alteration mapping.</div>
+        <div class="sat-tags">
+          <span class="sat-tag">Multi-Spectral</span>
+          <span class="sat-tag">30m GSD</span>
+          <span class="sat-tag">Free</span>
+        </div>
+        <div class="sat-expand"><span class="sat-expand-arrow">&#9654;</span> Specifications</div>
+        <div class="sat-detail">
+          <div class="sat-detail-inner">
+            <div class="sat-spec"><span class="sat-spec-label">Bands</span><span class="sat-spec-value">11 (OLI + TIRS)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Spatial Resolution</span><span class="sat-spec-value">30m (MS) / 15m (PAN)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Revisit Period</span><span class="sat-spec-value">16 days</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Swath Width</span><span class="sat-spec-value">185 km</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Spectral Range</span><span class="sat-spec-value">0.43 &ndash; 12.51 &mu;m</span></div>
+            <div class="sat-use-case">
+              <div class="sat-use-case-title">PMH Application</div>
+              <div class="sat-use-case-text">Regional-scale iron oxide and clay alteration mapping using band ratios (6/7, 4/2). Time-series analysis for vegetation anomaly detection over concealed mineralisation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASTER -->
+      <div class="sat-card" style="--sat-accent:#e07040">
+        <div class="sat-name">ASTER</div>
+        <div class="sat-operator">NASA / METI (Japan)</div>
+        <div class="sat-summary">14-band instrument with unique TIR capability for silicate mineral discrimination and thermal anomaly detection.</div>
+        <div class="sat-tags">
+          <span class="sat-tag">Hyperspectral</span>
+          <span class="sat-tag">15&ndash;90m GSD</span>
+          <span class="sat-tag">TIR</span>
+        </div>
+        <div class="sat-expand"><span class="sat-expand-arrow">&#9654;</span> Specifications</div>
+        <div class="sat-detail">
+          <div class="sat-detail-inner">
+            <div class="sat-spec"><span class="sat-spec-label">Bands</span><span class="sat-spec-value">14 (VNIR + SWIR + TIR)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Spatial Resolution</span><span class="sat-spec-value">15m (VNIR) / 30m (SWIR) / 90m (TIR)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Revisit Period</span><span class="sat-spec-value">16 days</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Swath Width</span><span class="sat-spec-value">60 km</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Spectral Range</span><span class="sat-spec-value">0.52 &ndash; 11.65 &mu;m</span></div>
+            <div class="sat-use-case">
+              <div class="sat-use-case-title">PMH Application</div>
+              <div class="sat-use-case-text">SWIR band ratios for precise clay mineral identification (kaolinite vs illite vs alunite). TIR emissivity for quartz-rich silicification and carbonate discrimination in target zones.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sentinel-1 -->
+      <div class="sat-card" style="--sat-accent:#70b0a0">
+        <div class="sat-name">Sentinel-1</div>
+        <div class="sat-operator">ESA / Copernicus</div>
+        <div class="sat-summary">C-band SAR constellation providing all-weather, day-night imaging for structural analysis and ground deformation monitoring.</div>
+        <div class="sat-tags">
+          <span class="sat-tag">SAR / Radar</span>
+          <span class="sat-tag">5&ndash;20m</span>
+          <span class="sat-tag">Free</span>
+        </div>
+        <div class="sat-expand"><span class="sat-expand-arrow">&#9654;</span> Specifications</div>
+        <div class="sat-detail">
+          <div class="sat-detail-inner">
+            <div class="sat-spec"><span class="sat-spec-label">Frequency</span><span class="sat-spec-value">C-band (5.405 GHz)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Spatial Resolution</span><span class="sat-spec-value">5 &times; 20m (IW mode)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Revisit Period</span><span class="sat-spec-value">6 days (constellation)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Swath Width</span><span class="sat-spec-value">250 km</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Polarisation</span><span class="sat-spec-value">VV + VH (dual-pol)</span></div>
+            <div class="sat-use-case">
+              <div class="sat-use-case-title">PMH Application</div>
+              <div class="sat-use-case-text">Structural lineament extraction from SAR backscatter. InSAR coherence analysis for identifying active fault zones and deep-seated structures controlling mineralisation corridors.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sentinel-2 -->
+      <div class="sat-card" style="--sat-accent:#5090c0">
+        <div class="sat-name">Sentinel-2</div>
+        <div class="sat-operator">ESA / Copernicus</div>
+        <div class="sat-summary">13-band high-revisit multi-spectral imager optimised for land monitoring with dedicated red-edge bands for vegetation stress analysis.</div>
+        <div class="sat-tags">
+          <span class="sat-tag">Multi-Spectral</span>
+          <span class="sat-tag">10&ndash;60m GSD</span>
+          <span class="sat-tag">Free</span>
+        </div>
+        <div class="sat-expand"><span class="sat-expand-arrow">&#9654;</span> Specifications</div>
+        <div class="sat-detail">
+          <div class="sat-detail-inner">
+            <div class="sat-spec"><span class="sat-spec-label">Bands</span><span class="sat-spec-value">13 (MSI)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Spatial Resolution</span><span class="sat-spec-value">10m (VIS) / 20m (NIR/SWIR) / 60m (atm)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Revisit Period</span><span class="sat-spec-value">5 days (constellation)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Swath Width</span><span class="sat-spec-value">290 km</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Spectral Range</span><span class="sat-spec-value">0.44 &ndash; 2.19 &mu;m</span></div>
+            <div class="sat-use-case">
+              <div class="sat-use-case-title">PMH Application</div>
+              <div class="sat-use-case-text">High-frequency monitoring of exploration tenements. Red-edge bands detect vegetation stress anomalies over shallow mineralisation. SWIR ratios complement Landsat for alteration mapping.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WorldView-2 -->
+      <div class="sat-card" style="--sat-accent:#c8a050">
+        <div class="sat-name">WorldView-2</div>
+        <div class="sat-operator">Maxar Technologies</div>
+        <div class="sat-summary">Very high-resolution 8-band commercial satellite enabling sub-metre structural mapping and detailed alteration zone delineation.</div>
+        <div class="sat-tags">
+          <span class="sat-tag">VHR</span>
+          <span class="sat-tag">0.46m PAN</span>
+          <span class="sat-tag">Commercial</span>
+        </div>
+        <div class="sat-expand"><span class="sat-expand-arrow">&#9654;</span> Specifications</div>
+        <div class="sat-detail">
+          <div class="sat-detail-inner">
+            <div class="sat-spec"><span class="sat-spec-label">Bands</span><span class="sat-spec-value">8 (MS) + 1 (PAN)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Spatial Resolution</span><span class="sat-spec-value">0.46m (PAN) / 1.84m (MS)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Revisit Period</span><span class="sat-spec-value">1.1 days (off-nadir)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Swath Width</span><span class="sat-spec-value">16.4 km</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Unique Bands</span><span class="sat-spec-value">Coastal, Yellow, Red Edge, NIR2</span></div>
+            <div class="sat-use-case">
+              <div class="sat-use-case-title">PMH Application</div>
+              <div class="sat-use-case-text">Targeted high-resolution analysis of priority drill areas. Coastal and yellow bands enable iron oxide sub-type discrimination. Stereo-pair DEM generation for detailed structural mapping.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JL-1 -->
+      <div class="sat-card" style="--sat-accent:#9070b0">
+        <div class="sat-name">JL-1 (Jilin-1)</div>
+        <div class="sat-operator">Chang Guang Satellite Technology</div>
+        <div class="sat-summary">Rapidly expanding Chinese commercial constellation offering high-resolution optical and video imaging with fast revisit capability.</div>
+        <div class="sat-tags">
+          <span class="sat-tag">VHR Optical</span>
+          <span class="sat-tag">0.72m</span>
+          <span class="sat-tag">Video</span>
+        </div>
+        <div class="sat-expand"><span class="sat-expand-arrow">&#9654;</span> Specifications</div>
+        <div class="sat-detail">
+          <div class="sat-detail-inner">
+            <div class="sat-spec"><span class="sat-spec-label">Constellation</span><span class="sat-spec-value">138+ satellites (growing)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Spatial Resolution</span><span class="sat-spec-value">0.72m (PAN) / 2.88m (MS)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Revisit Period</span><span class="sat-spec-value">&lt;1 day (constellation)</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Swath Width</span><span class="sat-spec-value">11.6 km</span></div>
+            <div class="sat-spec"><span class="sat-spec-label">Special Capability</span><span class="sat-spec-value">HD video, push-broom MS</span></div>
+            <div class="sat-use-case">
+              <div class="sat-use-case-title">PMH Application</div>
+              <div class="sat-use-case-text">Rapid-revisit monitoring of exploration sites and mining operations. Video capability for real-time site assessment. Cost-effective alternative to Western VHR platforms for routine monitoring.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Continue: How We Partner -->
+<section style="padding:0 80px 64px;max-width:900px;margin:0 auto">
+  <div class="fu5" style="margin-top:0"><div class="sl" style="margin-bottom:10px">How We Partner</div><h2 style="font-size:30px;font-weight:400;color:#0F1E2E;margin-bottom:20px">Building Local Partnerships. Investing in Early-Stage Assets.</h2>
   <p class="bt" style="margin-bottom:12px">We believe the best projects are built together. PMH actively seeks partnerships with local license holders, community leaders, junior explorers, and independent operators across our target regions. We are open to all forms of collaboration, from joint ventures and earn-in agreements to full project acquisitions, and we welcome proposals at any stage.</p>
   <p class="bt" style="margin-bottom:28px">If you have geological potential and local knowledge, we bring the capital, technical team, and international infrastructure to move a project forward.</p>
   <div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:14px">We Are Actively Looking for Early-Stage Investment Opportunities In:</div>
@@ -88,7 +428,7 @@
 <footer>
   <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="assets/img/logo.svg" alt="PMH" style="height:18px">
+      <img src="assets/img/logo.png" alt="PMH" style="height:18px">
       <div><div class="dm" style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B8964E">Paramount Matter Holdings</div><div class="dm" style="font-size:12px;color:#7A8FA0;margin-top:2px">109 North Bridge Road, Singapore 179097</div></div>
     </div>
     <div style="display:flex;gap:40px">
@@ -101,5 +441,6 @@
   </div>
 </footer>
 
+<script src="assets/js/tech-demo.js"></script>
 </body>
 </html>
