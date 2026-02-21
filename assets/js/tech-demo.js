@@ -13,147 +13,53 @@
   function qsa(sel, ctx) { return Array.from((ctx || document).querySelectorAll(sel)); }
 
   // ============================================================
-  // MODULE 1: Remote Sensing Workflow
+  // MODULE 1: Data Fusion Funnel
   // ============================================================
   function initWorkflow() {
     var wrap = qs('#workflowModule');
     if (!wrap) return;
 
-    var nodes = qsa('.workflow-node', wrap);
-    var infoTitle = qs('.workflow-info .info-title', wrap);
-    var infoText = qs('.workflow-info .info-text', wrap);
-    var svgEl = qs('.workflow-svg', wrap);
-    var containerEl = qs('.workflow-container', wrap);
-    var activeNode = null;
+    var sources = qsa('.funnel-source', wrap);
+    var tooltip = qs('#funnelTooltip', wrap);
+    var targetEl = qs('#funnelTarget', wrap);
+    var detailPanel = qs('#funnelDetailPanel', wrap);
 
-    // Node data
-    var nodeInfo = {
-      'multispectral': {
-        title: 'Multi-Spectral Imagery (Landsat-8 / Sentinel-2)',
-        text: 'Multi-spectral satellites capture reflected light across visible and infrared bands. Band ratios (e.g., SWIR/NIR) highlight iron oxide and hydroxyl alteration zones — key indicators of hydrothermal mineralisation systems.'
-      },
-      'hyperspectral': {
-        title: 'Hyperspectral Sensors (ASTER / WorldView-2)',
-        text: 'Hyperspectral imaging provides dozens of narrow spectral bands enabling precise mineral identification. SWIR and TIR data can distinguish between kaolinite, illite, alunite, and chlorite — critical for mapping alteration assemblages.'
-      },
-      'sar': {
-        title: 'Synthetic Aperture Radar (Sentinel-1)',
-        text: 'SAR penetrates cloud cover and vegetation, revealing surface roughness and structural lineaments. InSAR time-series detect subtle ground deformation patterns associated with deep-seated geological structures.'
-      },
-      'dem': {
-        title: 'Digital Elevation Models (SRTM / LiDAR)',
-        text: 'High-resolution DEM data enables terrain analysis, drainage pattern extraction, and identification of structural controls on mineralisation — ridgelines, fault scarps, and basin morphology.'
-      },
-      'pca': {
-        title: 'Principal Component Analysis (PCA)',
-        text: 'PCA reduces dimensionality of multi-band datasets to extract the most statistically significant spectral features. Directed PCA (Crosta technique) isolates specific alteration signatures from background noise.'
-      },
-      'bandratio': {
-        title: 'Band Ratio & Index Mapping',
-        text: 'Ratios like (Band 6/Band 7) for iron oxide and (Band 5/Band 6) for clay minerals normalise illumination effects and enhance subtle alteration signatures across large tenements.'
-      },
-      'ml': {
-        title: 'Machine Learning Classification',
-        text: 'Random Forest and gradient-boosted models trained on known deposit signatures classify prospectivity across unmapped terrain. Ensemble methods integrate geological, geochemical, and remote sensing layers.'
-      },
-      'structural': {
-        title: 'Structural Lineament Extraction',
-        text: 'Automated edge-detection and directional filtering applied to hillshaded DEM and SAR data extract fault traces, shear zone boundaries, and fold axes controlling fluid flow and ore deposition.'
-      },
-      'alteration': {
-        title: 'Alteration Zone Mapping',
-        text: 'Multi-source spectral data reveals zones of iron oxide (gossan), argillic, phyllic, and propylitic alteration — each diagnostic of different parts of a hydrothermal mineralisation system.'
-      },
-      'anomaly': {
-        title: 'Geochemical Anomaly Correlation',
-        text: 'Remote sensing outputs are validated against stream-sediment and soil-sample geochemistry. Spatial coincidence of spectral anomalies with elevated Au, Cu, As, or Sb confirms prospective target zones.'
-      },
-      'prospectivity': {
-        title: 'Prospectivity Model Integration',
-        text: 'All layers — spectral, structural, geochemical, geological — are combined into a weighted spatial model that ranks exploration targets by probability of hosting economic mineralisation.'
-      },
-      'drillready': {
-        title: 'Drill-Ready Target Delineation',
-        text: 'The highest-ranked targets undergo field validation (mapping, channel sampling, trenching) before drill-pad siting. This systematic funnel reduces exploration risk and accelerates discovery timelines.'
-      }
+    // Hover descriptions for data sources
+    var srcInfo = {
+      'satellite': 'Multi-spectral and high-resolution optical imagery for alteration mapping and lithological discrimination',
+      'radar': 'Synthetic aperture radar for all-weather structural analysis and surface deformation monitoring',
+      'geophysical': 'Magnetics, gravity, and radiometrics for subsurface structural and compositional interpretation',
+      'geochemical': 'Soil and stream sediment analysis for pathfinder element anomalies',
+      'fieldgeo': 'Systematic geological mapping, structural measurement, and outcrop characterisation'
     };
 
-    // Column assignments for connections
-    var connections = [
-      ['multispectral', 'pca'], ['multispectral', 'bandratio'],
-      ['hyperspectral', 'pca'], ['hyperspectral', 'bandratio'],
-      ['sar', 'structural'], ['sar', 'ml'],
-      ['dem', 'structural'], ['dem', 'ml'],
-      ['pca', 'alteration'], ['bandratio', 'alteration'],
-      ['ml', 'prospectivity'], ['ml', 'anomaly'],
-      ['structural', 'prospectivity'], ['structural', 'anomaly'],
-      ['alteration', 'anomaly'], ['alteration', 'prospectivity'],
-      ['anomaly', 'drillready'], ['prospectivity', 'drillready']
-    ];
-
-    function getNodeCenter(el) {
-      var r = el.getBoundingClientRect();
-      var cr = containerEl.getBoundingClientRect();
-      return {
-        x: r.left + r.width / 2 - cr.left,
-        y: r.top + r.height / 2 - cr.top
-      };
-    }
-
-    function drawConnections(activeId) {
-      if (!svgEl || !containerEl) return;
-      var cr = containerEl.getBoundingClientRect();
-      svgEl.setAttribute('viewBox', '0 0 ' + cr.width + ' ' + cr.height);
-      svgEl.style.width = cr.width + 'px';
-      svgEl.style.height = cr.height + 'px';
-
-      var html = '';
-      connections.forEach(function (c) {
-        var fromEl = qs('[data-node="' + c[0] + '"]', wrap);
-        var toEl = qs('[data-node="' + c[1] + '"]', wrap);
-        if (!fromEl || !toEl) return;
-        var from = getNodeCenter(fromEl);
-        var to = getNodeCenter(toEl);
-        var isActive = activeId && (c[0] === activeId || c[1] === activeId);
-        var mx = (from.x + to.x) / 2;
-        var d = 'M' + from.x + ',' + from.y + ' C' + mx + ',' + from.y + ' ' + mx + ',' + to.y + ' ' + to.x + ',' + to.y;
-        html += '<path d="' + d + '" class="' + (isActive ? 'active' : '') + '"/>';
-      });
-      svgEl.innerHTML = html;
-    }
-
-    function activateNode(id) {
-      nodes.forEach(function (n) {
-        n.classList.toggle('active', n.getAttribute('data-node') === id);
-      });
-      if (nodeInfo[id]) {
-        infoTitle.textContent = nodeInfo[id].title;
-        infoText.textContent = nodeInfo[id].text;
-      }
-      drawConnections(id);
-      activeNode = id;
-    }
-
-    nodes.forEach(function (n) {
-      n.addEventListener('click', function () {
-        var id = n.getAttribute('data-node');
-        activateNode(id === activeNode ? null : id);
-        if (id === activeNode) {
-          // deactivate
-          nodes.forEach(function (nd) { nd.classList.remove('active'); });
-          infoTitle.textContent = '';
-          infoText.innerHTML = '<span class="info-hint">Click any node to explore the workflow</span>';
-          drawConnections(null);
-          activeNode = null;
+    // Source hover
+    sources.forEach(function (s) {
+      s.addEventListener('mouseenter', function () {
+        var id = s.getAttribute('data-src');
+        if (srcInfo[id] && tooltip) {
+          tooltip.textContent = srcInfo[id];
+          tooltip.classList.add('visible');
+          // Position below the source
+          var sr = s.getBoundingClientRect();
+          var wr = wrap.getBoundingClientRect();
+          tooltip.style.left = (sr.left + sr.width / 2 - wr.left) + 'px';
+          tooltip.style.top = (sr.bottom - wr.top + 8) + 'px';
         }
+        s.classList.add('active');
+      });
+      s.addEventListener('mouseleave', function () {
+        if (tooltip) tooltip.classList.remove('visible');
+        s.classList.remove('active');
       });
     });
 
-    // Initial
-    drawConnections(null);
-    infoText.innerHTML = '<span class="info-hint">Click any node to explore the workflow</span>';
-
-    window.addEventListener('resize', function () { drawConnections(activeNode); });
+    // Target click
+    if (targetEl && detailPanel) {
+      targetEl.addEventListener('click', function () {
+        detailPanel.classList.toggle('open');
+      });
+    }
   }
 
   // ============================================================
@@ -626,11 +532,11 @@
       // Simulated coordinates (West Africa region)
       var lng = (-8.5 + (mx / W) * 6).toFixed(3);
       var lat = (12.5 - (my / H) * 5).toFixed(3);
-      cursorInfo.textContent = lat + '\u00b0N, ' + lng + '\u00b0W';
+      cursorInfo.textContent = lat + '\u00b0N, ' + lng + '\u00b0W  (simulated)';
     });
 
     canvas.addEventListener('mouseleave', function () {
-      cursorInfo.textContent = 'Hover to see coordinates';
+      cursorInfo.textContent = 'Coordinates are simulated for demonstration';
     });
 
     // Auto-demo

@@ -77,86 +77,13 @@
 }
 
 /* ============================================================
-   MODULE 1: Remote Sensing Workflow Flowchart
+   MODULE 1: Data Fusion Funnel
    ============================================================ */
-.workflow-container {
+.funnel-wrap {
   position: relative;
-  min-height: 380px;
+  padding: 10px 0 0;
 }
-.workflow-columns {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  position: relative;
-}
-.workflow-col-head {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #c8a050;
-  margin-bottom: 16px;
-  text-align: center;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(200, 160, 80, .15);
-}
-.workflow-node {
-  background: rgba(255, 255, 255, .04);
-  border: 1px solid rgba(255, 255, 255, .08);
-  border-radius: 4px;
-  padding: 14px 16px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  transition: all .3s ease;
-  position: relative;
-}
-.workflow-node:hover,
-.workflow-node.active {
-  background: rgba(200, 160, 80, .08);
-  border-color: rgba(200, 160, 80, .3);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
-}
-.workflow-node .node-icon {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-.workflow-node .node-name {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #e8e0d0;
-  margin-bottom: 3px;
-}
-.workflow-node .node-detail {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  color: #7a8fa0;
-  line-height: 1.5;
-}
-.workflow-node .node-pulse {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #c8a050;
-  opacity: 0;
-  transition: opacity .3s;
-}
-.workflow-node.active .node-pulse {
-  opacity: 1;
-  animation: pulse-glow 1.5s ease infinite;
-}
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 4px rgba(200, 160, 80, .4); }
-  50% { box-shadow: 0 0 12px rgba(200, 160, 80, .8); }
-}
-
-/* Connection lines canvas */
-.workflow-svg {
+.funnel-svg {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
@@ -164,50 +91,177 @@
   pointer-events: none;
   z-index: 0;
 }
-.workflow-svg path {
-  fill: none;
-  stroke: rgba(200, 160, 80, .15);
-  stroke-width: 1.5;
-  transition: stroke .4s, stroke-width .4s;
+
+/* Tier layout */
+.funnel-tier {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 28px;
 }
-.workflow-svg path.active {
-  stroke: rgba(200, 160, 80, .6);
-  stroke-width: 2;
-  stroke-dasharray: 6 4;
-  animation: flow-dash 1.2s linear infinite;
-}
-@keyframes flow-dash {
-  to { stroke-dashoffset: -10; }
+.funnel-tier-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8a050;
+  margin-bottom: 16px;
 }
 
-/* Info panel */
-.workflow-info {
-  margin-top: 20px;
-  padding: 20px 24px;
-  background: rgba(200, 160, 80, .06);
-  border: 1px solid rgba(200, 160, 80, .15);
-  border-radius: 4px;
-  min-height: 80px;
-  transition: all .4s ease;
+/* Tier 1: Data sources — wide row */
+.funnel-sources {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
-.workflow-info .info-title {
+.funnel-source {
+  background: rgba(90, 143, 170, .08);
+  border: 1px solid rgba(90, 143, 170, .2);
+  border-radius: 4px;
+  padding: 18px 20px 14px;
+  width: 130px;
+  cursor: pointer;
+  transition: all .3s ease;
+  text-align: center;
+}
+.funnel-source:hover,
+.funnel-source.active {
+  background: rgba(90, 143, 170, .15);
+  border-color: rgba(90, 143, 170, .45);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+}
+.funnel-source-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.funnel-source-name {
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #c0d0dd;
+  line-height: 1.4;
+}
+
+/* Tooltip */
+.funnel-tooltip {
+  position: absolute;
+  z-index: 5;
+  background: rgba(10, 15, 26, .94);
+  border: 1px solid rgba(200, 160, 80, .25);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #94a8ba;
+  line-height: 1.6;
+  max-width: 280px;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  white-space: normal;
+}
+.funnel-tooltip.visible {
+  opacity: 1;
+}
+
+/* Tier 2: Processing — narrower row */
+.funnel-tier-2 {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.funnel-processes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.funnel-process {
+  background: rgba(160, 140, 90, .08);
+  border: 1px solid rgba(160, 140, 90, .2);
+  border-radius: 4px;
+  padding: 16px 24px;
+  flex: 1;
+  max-width: 200px;
+}
+.funnel-process-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d0c8a0;
+}
+
+/* Tier 3: Target — single glowing node */
+.funnel-tier-3 {
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.funnel-target {
+  position: relative;
+  background: rgba(200, 160, 80, .1);
+  border: 1.5px solid rgba(200, 160, 80, .4);
+  border-radius: 6px;
+  padding: 24px 28px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.funnel-target:hover {
+  background: rgba(200, 160, 80, .16);
+  border-color: rgba(200, 160, 80, .6);
+  box-shadow: 0 0 30px rgba(200, 160, 80, .15);
+}
+.funnel-target-glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 8px;
+  border: 1px solid rgba(200, 160, 80, .2);
+  animation: target-pulse 2.5s ease infinite;
+  pointer-events: none;
+}
+@keyframes target-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.02); }
+}
+.funnel-target-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
   font-weight: 700;
   color: #c8a050;
   margin-bottom: 6px;
 }
-.workflow-info .info-text {
+.funnel-target-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #94a8ba;
+  line-height: 1.5;
+}
+
+/* Detail panel (click target) */
+.funnel-detail-panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .4s ease, opacity .3s ease, margin .3s ease;
+  margin-top: 0;
+}
+.funnel-detail-panel.open {
+  max-height: 120px;
+  opacity: 1;
+  margin-top: 16px;
+}
+.funnel-detail-text {
+  padding: 16px 20px;
+  background: rgba(200, 160, 80, .06);
+  border: 1px solid rgba(200, 160, 80, .15);
+  border-radius: 4px;
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   color: #94a8ba;
   line-height: 1.7;
-}
-.workflow-info .info-hint {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
-  color: #4a5a6a;
-  font-style: italic;
 }
 
 /* ============================================================
@@ -562,9 +616,23 @@
   .tech-module {
     padding: 24px 20px;
   }
-  .workflow-columns {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+  .funnel-sources {
+    gap: 10px;
+  }
+  .funnel-source {
+    width: 100px;
+    padding: 12px 10px 10px;
+  }
+  .funnel-source-name {
+    font-size: 11px;
+  }
+  .funnel-processes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .funnel-process {
+    max-width: 100%;
+    width: 100%;
   }
   .gis-container {
     grid-template-columns: 1fr;
@@ -580,7 +648,12 @@
   }
 }
 @media (max-width: 480px) {
-  .workflow-columns {
-    grid-template-columns: 1fr;
+  .funnel-sources {
+    flex-direction: column;
+    align-items: center;
+  }
+  .funnel-source {
+    width: 100%;
+    max-width: 200px;
   }
 }
