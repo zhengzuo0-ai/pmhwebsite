@@ -1,0 +1,583 @@
+/* ============================================================
+   Tech Demo Modules — approach.html
+   Remote Sensing Workflow / GIS Layer Demo / Satellite Sources
+   ============================================================ */
+
+/* Section wrapper */
+.tech-section {
+  padding: 64px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.tech-section .section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c8a050;
+  margin-bottom: 10px;
+}
+.tech-section h2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #0F1E2E;
+  margin-bottom: 8px;
+}
+.tech-section .section-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.85;
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+
+/* ---- MODULE CONTAINER ---- */
+.tech-module {
+  background: linear-gradient(160deg, #0a0f1a 0%, #111827 50%, #1a1f2e 100%);
+  border-radius: 6px;
+  border: 1px solid rgba(200, 160, 80, .12);
+  padding: 40px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.tech-module::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c8a050 30%, #c8a050 70%, transparent);
+  opacity: .5;
+}
+.tech-module-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c8a050;
+  margin-bottom: 8px;
+}
+.tech-module h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.tech-module .module-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #7a8fa0;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 28px;
+}
+
+/* ============================================================
+   MODULE 1: Remote Sensing Workflow Flowchart
+   ============================================================ */
+.workflow-container {
+  position: relative;
+  min-height: 380px;
+}
+.workflow-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.workflow-col-head {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8a050;
+  margin-bottom: 16px;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(200, 160, 80, .15);
+}
+.workflow-node {
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 4px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all .3s ease;
+  position: relative;
+}
+.workflow-node:hover,
+.workflow-node.active {
+  background: rgba(200, 160, 80, .08);
+  border-color: rgba(200, 160, 80, .3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+}
+.workflow-node .node-icon {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.workflow-node .node-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e8e0d0;
+  margin-bottom: 3px;
+}
+.workflow-node .node-detail {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #7a8fa0;
+  line-height: 1.5;
+}
+.workflow-node .node-pulse {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c8a050;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.workflow-node.active .node-pulse {
+  opacity: 1;
+  animation: pulse-glow 1.5s ease infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px rgba(200, 160, 80, .4); }
+  50% { box-shadow: 0 0 12px rgba(200, 160, 80, .8); }
+}
+
+/* Connection lines canvas */
+.workflow-svg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.workflow-svg path {
+  fill: none;
+  stroke: rgba(200, 160, 80, .15);
+  stroke-width: 1.5;
+  transition: stroke .4s, stroke-width .4s;
+}
+.workflow-svg path.active {
+  stroke: rgba(200, 160, 80, .6);
+  stroke-width: 2;
+  stroke-dasharray: 6 4;
+  animation: flow-dash 1.2s linear infinite;
+}
+@keyframes flow-dash {
+  to { stroke-dashoffset: -10; }
+}
+
+/* Info panel */
+.workflow-info {
+  margin-top: 20px;
+  padding: 20px 24px;
+  background: rgba(200, 160, 80, .06);
+  border: 1px solid rgba(200, 160, 80, .15);
+  border-radius: 4px;
+  min-height: 80px;
+  transition: all .4s ease;
+}
+.workflow-info .info-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #c8a050;
+  margin-bottom: 6px;
+}
+.workflow-info .info-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #94a8ba;
+  line-height: 1.7;
+}
+.workflow-info .info-hint {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #4a5a6a;
+  font-style: italic;
+}
+
+/* ============================================================
+   MODULE 2: Interactive GIS Layer Demo
+   ============================================================ */
+.gis-container {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 24px;
+  align-items: start;
+}
+.gis-canvas-wrap {
+  position: relative;
+  background: #070b12;
+  border: 1px solid rgba(255, 255, 255, .06);
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.gis-canvas-wrap canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.gis-canvas-wrap .gis-cursor-info {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-family: 'DM Sans', monospace;
+  font-size: 11px;
+  color: #7a8fa0;
+  background: rgba(10, 15, 26, .85);
+  padding: 4px 10px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.gis-canvas-wrap .gis-scale {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: #7a8fa0;
+}
+.gis-scale-bar {
+  width: 48px;
+  height: 3px;
+  background: #7a8fa0;
+  position: relative;
+}
+.gis-scale-bar::before, .gis-scale-bar::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 7px;
+  background: #7a8fa0;
+  top: -2px;
+}
+.gis-scale-bar::before { left: 0; }
+.gis-scale-bar::after { right: 0; }
+
+/* Layer panel */
+.gis-panel {
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(255, 255, 255, .06);
+  border-radius: 4px;
+  padding: 20px;
+}
+.gis-panel-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8a050;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(200, 160, 80, .15);
+}
+.gis-layer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .04);
+  cursor: pointer;
+  transition: background .2s;
+}
+.gis-layer:last-child { border-bottom: none; }
+.gis-layer:hover { background: rgba(255, 255, 255, .02); }
+.gis-layer-toggle {
+  width: 32px;
+  height: 18px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .1);
+  position: relative;
+  flex-shrink: 0;
+  transition: background .3s;
+}
+.gis-layer-toggle::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #4a5a6a;
+  top: 2px;
+  left: 2px;
+  transition: all .3s;
+}
+.gis-layer.on .gis-layer-toggle {
+  background: rgba(200, 160, 80, .3);
+}
+.gis-layer.on .gis-layer-toggle::after {
+  background: #c8a050;
+  left: 16px;
+}
+.gis-layer-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.gis-layer-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #94a8ba;
+  transition: color .3s;
+}
+.gis-layer.on .gis-layer-name {
+  color: #e8e0d0;
+}
+
+/* Auto-demo button */
+.gis-auto-btn {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background: rgba(200, 160, 80, .1);
+  border: 1px solid rgba(200, 160, 80, .2);
+  border-radius: 4px;
+  color: #c8a050;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .3s;
+}
+.gis-auto-btn:hover {
+  background: rgba(200, 160, 80, .2);
+  border-color: rgba(200, 160, 80, .4);
+}
+.gis-auto-btn.running {
+  background: rgba(200, 160, 80, .25);
+  color: #fff;
+}
+
+/* Legend gradient bar */
+.gis-legend {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+}
+.gis-legend-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #7a8fa0;
+  margin-bottom: 8px;
+}
+.gis-legend-bar {
+  height: 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+.gis-legend-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  color: #5a6a7a;
+}
+
+/* ============================================================
+   MODULE 3: Satellite Data Sources
+   ============================================================ */
+.sat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.sat-card {
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(255, 255, 255, .06);
+  border-radius: 4px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.sat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--sat-accent, #c8a050);
+  opacity: .4;
+  transition: opacity .3s;
+}
+.sat-card:hover::before,
+.sat-card.expanded::before {
+  opacity: 1;
+}
+.sat-card:hover {
+  background: rgba(255, 255, 255, .05);
+  border-color: rgba(200, 160, 80, .2);
+  transform: translateY(-2px);
+}
+.sat-card .sat-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #e8e0d0;
+  margin-bottom: 2px;
+}
+.sat-card .sat-operator {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #5a6a7a;
+  margin-bottom: 10px;
+}
+.sat-card .sat-summary {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #7a8fa0;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.sat-card .sat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0;
+  transition: margin-bottom .3s;
+}
+.sat-card.expanded .sat-tags {
+  margin-bottom: 14px;
+}
+.sat-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(200, 160, 80, .1);
+  color: #c8a050;
+}
+.sat-expand {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #c8a050;
+  margin-top: 10px;
+  opacity: .6;
+  transition: opacity .3s;
+}
+.sat-card:hover .sat-expand { opacity: 1; }
+.sat-expand-arrow {
+  display: inline-block;
+  transition: transform .3s;
+  font-size: 10px;
+}
+.sat-card.expanded .sat-expand-arrow {
+  transform: rotate(90deg);
+}
+
+/* Expanded detail */
+.sat-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease, opacity .3s;
+  opacity: 0;
+}
+.sat-card.expanded .sat-detail {
+  max-height: 400px;
+  opacity: 1;
+}
+.sat-detail-inner {
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+}
+.sat-spec {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .03);
+}
+.sat-spec:last-child { border-bottom: none; }
+.sat-spec-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #5a6a7a;
+}
+.sat-spec-value {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a8ba;
+}
+.sat-use-case {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(200, 160, 80, .06);
+  border-radius: 3px;
+  border-left: 2px solid rgba(200, 160, 80, .3);
+}
+.sat-use-case-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #c8a050;
+  margin-bottom: 4px;
+}
+.sat-use-case-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #7a8fa0;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .tech-section {
+    padding: 40px 24px;
+  }
+  .tech-module {
+    padding: 24px 20px;
+  }
+  .workflow-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .gis-container {
+    grid-template-columns: 1fr;
+  }
+  .gis-canvas-wrap {
+    aspect-ratio: 1/1;
+  }
+  .sat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .workflow-columns {
+    grid-template-columns: 1fr;
+  }
+}
