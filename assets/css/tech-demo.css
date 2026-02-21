@@ -575,6 +575,9 @@
   .sat-grid {
     grid-template-columns: 1fr;
   }
+  #satModule > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
 }
 @media (max-width: 480px) {
   .workflow-columns {
