@@ -584,18 +584,27 @@
       step();
     });
 
-    // Init
-    resize();
-    buildAllLayers();
-    // Turn on satellite by default
-    layers.satellite.on = true;
-    var satEl = qs('[data-layer="satellite"]', wrap);
-    if (satEl) satEl.classList.add('on');
-    render();
-    updateLegend();
+    // Init — delay to ensure layout is complete
+    function doInit() {
+      resize();
+      if (W < 10 || H < 10) {
+        // Layout not ready, retry
+        requestAnimationFrame(doInit);
+        return;
+      }
+      buildAllLayers();
+      // Turn on satellite by default
+      layers.satellite.on = true;
+      var satEl = qs('[data-layer="satellite"]', wrap);
+      if (satEl) satEl.classList.add('on');
+      render();
+      updateLegend();
+    }
+    requestAnimationFrame(doInit);
 
     window.addEventListener('resize', function () {
       resize();
+      if (W < 10 || H < 10) return;
       needsRebuild = true;
       buildAllLayers();
       render();

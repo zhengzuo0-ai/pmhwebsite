@@ -82,25 +82,6 @@
     <p class="module-desc">Five categories of geological data, processed through proprietary analytical pipelines, converge to identify high-confidence exploration targets.</p>
 
     <div class="funnel-wrap">
-      <!-- SVG background flow lines -->
-      <svg class="funnel-svg" viewBox="0 0 800 480" preserveAspectRatio="xMidYMid meet">
-        <defs>
-          <linearGradient id="flowGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#5a8faa" stop-opacity="0.15"/>
-            <stop offset="50%" stop-color="#8a7a5a" stop-opacity="0.12"/>
-            <stop offset="100%" stop-color="#c8a050" stop-opacity="0.2"/>
-          </linearGradient>
-        </defs>
-        <!-- Converging flow shape -->
-        <path d="M 40,95 C 40,140 200,200 280,260 L 280,290 C 200,230 40,180 40,95 Z" fill="url(#flowGrad)"/>
-        <path d="M 760,95 C 760,140 600,200 520,260 L 520,290 C 600,230 760,180 760,95 Z" fill="url(#flowGrad)"/>
-        <path d="M 200,95 C 200,140 300,200 330,260 L 330,290 C 300,230 200,180 200,95 Z" fill="url(#flowGrad)"/>
-        <path d="M 600,95 C 600,140 500,200 470,260 L 470,290 C 500,230 600,180 600,95 Z" fill="url(#flowGrad)"/>
-        <path d="M 400,95 C 400,140 400,200 400,260 L 400,290 C 400,230 400,180 400,95 Z" fill="url(#flowGrad)"/>
-        <!-- Bottom convergence to target -->
-        <path d="M 240,330 C 280,370 360,400 400,410 C 440,400 520,370 560,330 L 560,350 C 520,390 440,420 400,430 C 360,420 280,390 240,350 Z" fill="url(#flowGrad)"/>
-      </svg>
-
       <!-- TIER 1: Data Acquisition -->
       <div class="funnel-tier funnel-tier-1">
         <div class="funnel-tier-label">Data Acquisition</div>
@@ -131,6 +112,9 @@
       <!-- Hover tooltip -->
       <div class="funnel-tooltip" id="funnelTooltip"></div>
 
+      <!-- Flow connector 1→2 -->
+      <div class="funnel-flow"></div>
+
       <!-- TIER 2: Processing & Analysis -->
       <div class="funnel-tier funnel-tier-2">
         <div class="funnel-tier-label">Processing &amp; Analysis</div>
@@ -146,6 +130,9 @@
           </div>
         </div>
       </div>
+
+      <!-- Flow connector 2→3 -->
+      <div class="funnel-flow"></div>
 
       <!-- TIER 3: Target Generation -->
       <div class="funnel-tier funnel-tier-3">
