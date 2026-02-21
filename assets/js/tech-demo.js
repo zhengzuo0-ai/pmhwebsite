@@ -23,6 +23,7 @@
     var infoTitle = qs('.workflow-info .info-title', wrap);
     var infoText = qs('.workflow-info .info-text', wrap);
     var svgEl = qs('.workflow-svg', wrap);
+    var containerEl = qs('.workflow-container', wrap);
     var activeNode = null;
 
     // Node data
@@ -92,19 +93,19 @@
 
     function getNodeCenter(el) {
       var r = el.getBoundingClientRect();
-      var wr = wrap.getBoundingClientRect();
+      var cr = containerEl.getBoundingClientRect();
       return {
-        x: r.left + r.width / 2 - wr.left,
-        y: r.top + r.height / 2 - wr.top
+        x: r.left + r.width / 2 - cr.left,
+        y: r.top + r.height / 2 - cr.top
       };
     }
 
     function drawConnections(activeId) {
-      if (!svgEl) return;
-      var wr = wrap.getBoundingClientRect();
-      svgEl.setAttribute('viewBox', '0 0 ' + wr.width + ' ' + wr.height);
-      svgEl.style.width = wr.width + 'px';
-      svgEl.style.height = wr.height + 'px';
+      if (!svgEl || !containerEl) return;
+      var cr = containerEl.getBoundingClientRect();
+      svgEl.setAttribute('viewBox', '0 0 ' + cr.width + ' ' + cr.height);
+      svgEl.style.width = cr.width + 'px';
+      svgEl.style.height = cr.height + 'px';
 
       var html = '';
       connections.forEach(function (c) {
