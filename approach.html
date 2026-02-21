@@ -76,125 +76,104 @@
   <h2>How It Works &mdash; A Multi-Discipline Exploration Pipeline</h2>
   <p class="section-sub">Remote sensing provides the initial screening, but it is the integration of geochemistry, structural geology, and rigorous field validation that converts anomalies into drill-ready targets. Every stage builds confidence through independent lines of evidence.</p>
 
-  <!-- MODULE 1: Remote Sensing Workflow -->
+  <!-- MODULE 1: Data Fusion Funnel -->
   <div class="tech-module" id="workflowModule">
-    <div class="tech-module-title">Module 1</div>
-    <h3>Integrated Exploration Workflow</h3>
-    <p class="module-desc">Interactive flowchart showing how satellite data, geochemical analysis, and structural interpretation converge through validation to generate drill-ready exploration targets.</p>
+    <h3 style="color:#f0e8d4">From Data to Discovery &mdash; Our Integrated Workflow</h3>
+    <p class="module-desc">Five categories of geological data, processed through proprietary analytical pipelines, converge to identify high-confidence exploration targets.</p>
 
-    <div class="workflow-container">
-      <svg class="workflow-svg"></svg>
-      <div class="workflow-columns">
-        <!-- Column 1: Data Sources -->
-        <div>
-          <div class="workflow-col-head">Data Sources</div>
-          <div class="workflow-node" data-node="multispectral">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#127760;</div>
-            <div class="node-name">Multi-Spectral</div>
-            <div class="node-detail">Landsat-8 &middot; Sentinel-2</div>
+    <div class="funnel-wrap">
+      <!-- SVG background flow lines -->
+      <svg class="funnel-svg" viewBox="0 0 800 480" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="flowGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#5a8faa" stop-opacity="0.15"/>
+            <stop offset="50%" stop-color="#8a7a5a" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#c8a050" stop-opacity="0.2"/>
+          </linearGradient>
+        </defs>
+        <!-- Converging flow shape -->
+        <path d="M 40,95 C 40,140 200,200 280,260 L 280,290 C 200,230 40,180 40,95 Z" fill="url(#flowGrad)"/>
+        <path d="M 760,95 C 760,140 600,200 520,260 L 520,290 C 600,230 760,180 760,95 Z" fill="url(#flowGrad)"/>
+        <path d="M 200,95 C 200,140 300,200 330,260 L 330,290 C 300,230 200,180 200,95 Z" fill="url(#flowGrad)"/>
+        <path d="M 600,95 C 600,140 500,200 470,260 L 470,290 C 500,230 600,180 600,95 Z" fill="url(#flowGrad)"/>
+        <path d="M 400,95 C 400,140 400,200 400,260 L 400,290 C 400,230 400,180 400,95 Z" fill="url(#flowGrad)"/>
+        <!-- Bottom convergence to target -->
+        <path d="M 240,330 C 280,370 360,400 400,410 C 440,400 520,370 560,330 L 560,350 C 520,390 440,420 400,430 C 360,420 280,390 240,350 Z" fill="url(#flowGrad)"/>
+      </svg>
+
+      <!-- TIER 1: Data Acquisition -->
+      <div class="funnel-tier funnel-tier-1">
+        <div class="funnel-tier-label">Data Acquisition</div>
+        <div class="funnel-sources">
+          <div class="funnel-source" data-src="satellite">
+            <div class="funnel-source-icon">&#128752;</div>
+            <div class="funnel-source-name">Satellite Imagery</div>
           </div>
-          <div class="workflow-node" data-node="hyperspectral">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#128300;</div>
-            <div class="node-name">Hyperspectral</div>
-            <div class="node-detail">ASTER &middot; WorldView-2</div>
+          <div class="funnel-source" data-src="radar">
+            <div class="funnel-source-icon">&#128225;</div>
+            <div class="funnel-source-name">Radar &amp; SAR</div>
           </div>
-          <div class="workflow-node" data-node="sar">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#128225;</div>
-            <div class="node-name">SAR Radar</div>
-            <div class="node-detail">Sentinel-1 &middot; InSAR</div>
+          <div class="funnel-source" data-src="geophysical">
+            <div class="funnel-source-icon">&#127758;</div>
+            <div class="funnel-source-name">Geophysical Surveys</div>
           </div>
-          <div class="workflow-node" data-node="dem">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#9968;</div>
-            <div class="node-name">Elevation Data</div>
-            <div class="node-detail">SRTM &middot; LiDAR DEM</div>
+          <div class="funnel-source" data-src="geochemical">
+            <div class="funnel-source-icon">&#129514;</div>
+            <div class="funnel-source-name">Geochemical Sampling</div>
+          </div>
+          <div class="funnel-source" data-src="fieldgeo">
+            <div class="funnel-source-icon">&#9968;</div>
+            <div class="funnel-source-name">Field Geology</div>
           </div>
         </div>
+      </div>
 
-        <!-- Column 2: Processing Methods -->
-        <div>
-          <div class="workflow-col-head">Processing</div>
-          <div class="workflow-node" data-node="pca">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#128202;</div>
-            <div class="node-name">PCA Analysis</div>
-            <div class="node-detail">Directed principal components</div>
+      <!-- Hover tooltip -->
+      <div class="funnel-tooltip" id="funnelTooltip"></div>
+
+      <!-- TIER 2: Processing & Analysis -->
+      <div class="funnel-tier funnel-tier-2">
+        <div class="funnel-tier-label">Processing &amp; Analysis</div>
+        <div class="funnel-processes">
+          <div class="funnel-process">
+            <div class="funnel-process-name">Spectral &amp; Spatial Analysis</div>
           </div>
-          <div class="workflow-node" data-node="bandratio">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#128200;</div>
-            <div class="node-name">Band Ratios</div>
-            <div class="node-detail">Index mapping &amp; enhancement</div>
+          <div class="funnel-process">
+            <div class="funnel-process-name">Structural Interpretation</div>
           </div>
-          <div class="workflow-node" data-node="ml">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#129302;</div>
-            <div class="node-name">ML Classification</div>
-            <div class="node-detail">Random Forest &amp; ensemble</div>
-          </div>
-          <div class="workflow-node" data-node="structural">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#128204;</div>
-            <div class="node-name">Lineament Extraction</div>
-            <div class="node-detail">Edge detection &amp; filtering</div>
+          <div class="funnel-process">
+            <div class="funnel-process-name">Machine Learning Integration</div>
           </div>
         </div>
+      </div>
 
-        <!-- Column 3: Output Information -->
-        <div>
-          <div class="workflow-col-head">Outputs</div>
-          <div class="workflow-node" data-node="alteration">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#127755;</div>
-            <div class="node-name">Alteration Maps</div>
-            <div class="node-detail">Iron oxide &middot; argillic &middot; phyllic</div>
-          </div>
-          <div class="workflow-node" data-node="anomaly">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#128161;</div>
-            <div class="node-name">Anomaly Correlation</div>
-            <div class="node-detail">Spectral + geochemical validation</div>
-          </div>
-          <div class="workflow-node" data-node="prospectivity">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#127919;</div>
-            <div class="node-name">Prospectivity Model</div>
-            <div class="node-detail">Weighted spatial integration</div>
-          </div>
-        </div>
-
-        <!-- Column 4: Target Delineation -->
-        <div>
-          <div class="workflow-col-head">Target</div>
-          <div class="workflow-node" data-node="drillready">
-            <div class="node-pulse"></div>
-            <div class="node-icon">&#9873;</div>
-            <div class="node-name">Drill-Ready Targets</div>
-            <div class="node-detail">Field-validated, ranked priority zones for drilling</div>
-          </div>
+      <!-- TIER 3: Target Generation -->
+      <div class="funnel-tier funnel-tier-3">
+        <div class="funnel-tier-label">Target Generation</div>
+        <div class="funnel-target" id="funnelTarget">
+          <div class="funnel-target-glow"></div>
+          <div class="funnel-target-name">Ranked Exploration Targets</div>
+          <div class="funnel-target-sub">Multi-source integration with quantified confidence levels</div>
         </div>
       </div>
     </div>
 
-    <div class="workflow-info">
-      <div class="info-title"></div>
-      <div class="info-text"></div>
+    <!-- Target click panel -->
+    <div class="funnel-detail-panel" id="funnelDetailPanel">
+      <div class="funnel-detail-text">Our proprietary workflow integrates all data layers to generate ranked targets with 3-tier confidence classification.</div>
     </div>
   </div>
 
   <!-- MODULE 2: Interactive GIS Layer Demo -->
   <div class="tech-module" id="gisModule">
-    <div class="tech-module-title">Module 2</div>
     <h3>Interactive GIS Layer Demonstration</h3>
     <p class="module-desc">Toggle geological data layers to see how multi-source analysis builds a composite exploration model. Each layer adds a dimension of geological intelligence.</p>
 
     <div class="gis-container">
       <div class="gis-canvas-wrap">
         <canvas></canvas>
-        <div class="gis-cursor-info">Hover to see coordinates</div>
+        <div class="gis-cursor-info">Coordinates are simulated for demonstration</div>
+        <div class="gis-disclaimer" style="position:absolute;bottom:32px;right:12px;font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.3);max-width:180px;text-align:right;line-height:1.5;pointer-events:none">All data synthetically generated &mdash; does not represent real exploration sites</div>
         <div class="gis-scale">
           <div class="gis-scale-bar"></div>
           <span>5 km</span>
@@ -240,7 +219,6 @@
 
   <!-- MODULE 3: Multi-Source Data Integration -->
   <div class="tech-module" id="satModule">
-    <div class="tech-module-title">Module 3</div>
     <h3 style="color:#f0e8d4">Multi-Source Data Integration</h3>
     <p class="module-desc">We combine satellite, airborne, and ground-based datasets to build comprehensive exploration models.</p>
 
