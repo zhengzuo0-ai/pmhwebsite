@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Paramount Matter Holdings</title>
+<meta name="description" content="Get in touch with Paramount Matter Holdings — we review every enquiry carefully.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230F1E2E'/%3E%3Cpath d='M16 5 L27 16 L16 27 L5 16 Z' fill='%23B8964E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">
+    <img src="assets/img/logo.svg" alt="PMH">
+    <span>Paramount Matter</span>
+  </a>
+  <div class="links" id="navLinks">
+    <a href="about.html">About</a>
+    <a href="approach.html">Approach</a>
+    <a href="projects.html">Projects</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
+</nav>
+
+<div class="light-hero">
+  <div class="sl fu" style="margin-bottom:10px">Contact</div>
+  <h1 class="fu1">Let&rsquo;s Talk</h1>
+  <div class="fu2" style="width:52px;height:2px;background:#B8964E;margin:14px 0"></div>
+  <p class="fu3 bt" style="max-width:580px">We review every enquiry carefully and aim to connect with the right people promptly.</p>
+</div>
+
+<section style="padding:56px 80px;max-width:900px;margin:0 auto">
+  <div class="g2" style="gap:40px;margin-bottom:48px">
+    <div class="fu">
+      <div class="sl" style="margin-bottom:14px">Headquarters</div>
+      <div class="dm" style="font-size:14px;color:#2A2A2A;line-height:2"><strong>Paramount Matter Holdings Pte. Ltd.</strong><br>109 North Bridge Road<br>Singapore 179097</div>
+      <div style="margin-top:20px" class="dm"><div style="margin-bottom:6px"><span style="color:#7A7A7A">General: </span><a href="mailto:info@paramountmatter.com" style="color:#B8964E;font-weight:600;text-decoration:none">info@paramountmatter.com</a></div></div>
+      <div class="sl" style="margin-top:28px;margin-bottom:14px">We Are Seeking</div>
+      <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #E2DED5"><div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:3px">Strategic Partners</div><div class="bt" style="font-size:12.5px">License holders and junior miners seeking capital, technical expertise, and operational support</div></div>
+      <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #E2DED5"><div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:3px">Investment Partners</div><div class="bt" style="font-size:12.5px">Privately capitalised investors aligned with long-term, science-driven resource development</div></div>
+      <div><div class="dm" style="font-size:13px;font-weight:700;color:#0F1E2E;margin-bottom:3px">Technical Collaborators</div><div class="bt" style="font-size:12.5px">Geological service providers, drilling contractors, and technology companies in our target regions</div></div>
+    </div>
+    <div class="fu2">
+      <div class="sl" style="margin-bottom:14px">Send Us a Message</div>
+      <form class="contact-form" action="https://formspree.io/f/xjgeebvz" method="POST" style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
+          <div><label>Email</label><input type="email" name="email" required placeholder="your@email.com"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div><label>Company / Organisation</label><input type="text" name="company" placeholder="Optional"></div>
+          <div><label>I am a...</label><select name="enquiry_type" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="License Holder">License Holder</option>
+            <option value="Junior Explorer">Junior Explorer</option>
+            <option value="Investor">Investor / Fund</option>
+            <option value="Technical Provider">Technical / Service Provider</option>
+            <option value="Government">Government / Regulatory</option>
+            <option value="Other">Other</option>
+          </select></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div><label>Country of Interest</label><select name="country">
+            <option value="" disabled selected>Select if applicable</option>
+            <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+            <option value="Mali">Mali</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Namibia">Namibia</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Other Africa">Other (Africa)</option>
+            <option value="Other">Other (Non-Africa)</option>
+          </select></div>
+          <div><label>Commodity</label><select name="commodity">
+            <option value="" disabled selected>Select if applicable</option>
+            <option value="Gold">Gold</option>
+            <option value="Copper">Copper</option>
+            <option value="REE">Rare Earths (REE)</option>
+            <option value="Base Metals">Base Metals (Cu-Pb-Zn)</option>
+            <option value="Critical Metals">Critical Metals</option>
+            <option value="Multiple">Multiple</option>
+            <option value="Other">Other</option>
+          </select></div>
+        </div>
+        <div><label>Message</label><textarea name="message" required placeholder="Tell us about your project or enquiry..."></textarea></div>
+        <button type="submit" class="btn-gold" style="align-self:flex-start;margin-top:4px">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <div class="fu3 callout"><h3>Have a Project You&rsquo;d Like Us to Evaluate?</h3><p>Whether you hold a license in one of our target regions, represent a junior explorer looking for a partner, or have a project that could benefit from our technical and financial resources, we want to hear from you. Send us an overview and our team will be in touch.</p></div>
+  <div class="fu4 card" style="margin-top:24px"><div class="dm" style="font-size:15px;font-weight:600;color:#0F1E2E;margin-bottom:6px">Careers at PMH</div><p class="bt" style="font-size:13px">We&rsquo;re growing and looking for people who want to do real work in real places. We&rsquo;re especially interested in geologists with African field experience, regional operations managers, and finance/compliance professionals with multi-jurisdiction backgrounds. Reach out to <a href="mailto:info@paramountmatter.com" style="color:#B8964E;font-weight:600;text-decoration:none">info@paramountmatter.com</a>.</p></div>
+</section>
+
+<footer>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="assets/img/logo.svg" alt="PMH" style="height:18px">
+      <div><div class="dm" style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B8964E">Paramount Matter Holdings</div><div class="dm" style="font-size:12px;color:#7A8FA0;margin-top:2px">109 North Bridge Road, Singapore 179097</div></div>
+    </div>
+    <div style="display:flex;gap:40px">
+      <a href="about.html">About</a><a href="approach.html">Approach</a><a href="projects.html">Projects</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="dm" style="font-size:12px;color:#B8964E"><a href="mailto:info@paramountmatter.com" style="color:#B8964E;text-decoration:none">info@paramountmatter.com</a></div>
+  </div>
+  <div style="margin-top:32px;padding-top:16px;border-top:1px solid #1A3150;display:flex;justify-content:space-between">
+    <span class="dm" style="font-size:10px;color:#4A5A6A">&copy; 2026 Paramount Matter Holdings Pte. Ltd.</span>
+  </div>
+</footer>
+
+</body>
+</html>
